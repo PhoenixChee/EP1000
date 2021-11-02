@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website Development</title>
+    <link href="website-development.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+</head>
+
+<header>
+    <!-- NAVIGATION COMPONENT -->
+    <section class="header-container">
+        <div class="container">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">
+                            <ion-icon name="home"></ion-icon>
+                            <p2>Home</p2>
+                        </a></li>
+                    <li><a href="about-me.html">
+                            <ion-icon name="person"></ion-icon>
+                            <p2>About Me</p2>
+                        </a></li>
+                    <li><a href="timeline.html">
+                            <ion-icon name="calendar"></ion-icon>
+                            <p2>Timeline</p2>
+                        </a></li>
+                    <li><a href="website-development.html" class="active">
+                            <ion-icon name="layers"></ion-icon>
+                            <p2>Projects</p2>
+                            <ion-icon name="caret-down-outline"></ion-icon>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="#"><p3>Website Development<p3></a></li>
+                            <li><a href="#"><p3>Computer Graphics</p3></a></li>
+                            <li><a href="#"><p3>3D Printing</p3></a></li>
+                            <li><a href="#"><p3>Laser Cutting</p3></a></li>
+                            <li><a href="#"><p3>Arduino</p3></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="menu">
+                    <ion-icon id="icon-menu" name="grid-outline"></ion-icon>
+                    <ion-icon id="icon-close" name="close-circle-outline"></ion-icon>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- HERO COMPONENT -->
+    <section class="hero-container">
+        <img src="/images-background/background-hero.svg" alt="hero-bg">
+        <div class="title">
+            <h3>How I Made</h3>
+            <h1>This Website</h1>
+        </div>
+    </section>
+</header>
+
+<!-- SECTION -->
+<body>
+    <!-- CONTENTS COMPONENT -->
+    <section class="contents-container">
+        <div class="container">
+            <h2>Contents</h2>
+            <div class="content">
+                <a href="#1gettingstarted"><ion-icon name="happy-outline"></ion-icon>
+                    <p1>Getting Started</p1></a>
+                <a href="#2basics"><ion-icon name="school-outline"></ion-icon>
+                    <p1>The Basics</p1></a>
+                <a href="#3features"><ion-icon name="star-outline"></ion-icon>
+                    <p1>Website Features</p1></a>
+                <a href="#4resources"><ion-icon name="file-tray-stacked-outline"></ion-icon>
+                    <p1>Addition Resources</p1></a>
+            </div>
+        </div>
+    </section>
+    <!-- CARDS COMPONENT -->
+    <section class="cards-container" id="1gettingstarted">
+        <div class="container">
+            <h2 id="link">Getting Started</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="/website-development-images/website-development.png" alt="1">
+                    <div class="text">
+                        <h2>Documentation</h2>
+                        <p2>In this module, we made our own website from scratch using HTML, CSS and Javascript. We have to constantly update our websites with the knowledge gained throughout the module. This website will mainly serve as a documentation of the projects we have done. It allows us to log our achievements and mistakes in a way that is easily accessible.</p2>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/website-development-images/website-development.png" alt="2">
+                    <div class="text">
+                        <h2>Experience</h2>
+                        <p2>Website Development was a new experience. At first, coding HTML, CSS and Javascript seemed complicated since there are a plethora of properties to learn and use. I had to watch alot of tutorials trying to make my content look a certain way without copying their codes entirely as I believe everyone has their own way of coding. Eventually, I was able to understand the properties' function and managed to find an efficient way to code. </p2>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/website-development-images/website-development.png" alt="3">
+                    <div class="text">
+                        <h2>Being Ambitious</h2>
+                        <p2>I wanted my website to look minimistic and professional as I favor design very much. The most challenging part is having responsive layouts. I had to use special properties such as <mark>@media</mark> and <mark>flexbox</mark> to change the layout when it is at mobile resolution. Having responsive layout can be useful when I am changing lines of code while having full view of the content in a split screen. </p2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BASICS COMPONENT -->
+    <section class="basics-container" id="2basics">
+        <div class="container">
+            <h2 id="link">The Basics</h2>
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="cube"></ion-icon>
+                        <p2>Structuring</p2>
+                    </div>
+                    <div class="text">
+                        <h1>Basic HTML</h1>
+                        <p1>HyperText Markup Language (HTML) is the standard markup language for creating Web pages. HTML describes the structure of a Web page. HTML consists of a series of elements. HTML elements tell the browser how to display the content.</p1>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <ion-icon name="cube"></ion-icon>
+                        <h3>Structures</h3>
+                        <p3>Represemts the layout a webpage: header, nav, section, footer</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="star"></ion-icon>
+                        <h3>Elements</h3>
+                        <p3>Represents is everything from the start tag to the end tag and they can be nested</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="brush"></ion-icon>
+                        <h3>Styles</h3>
+                        <p3>Add styles to an element such as color, font, size and text alignment</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="navigate"></ion-icon>
+                        <h3>Hyperlinks</h3>
+                        <p3>Create links to other pages and locations within the page</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="pricetags"></ion-icon>
+                        <h3>Tags</h3>
+                        <p3>Classes and IDs can be referenced easily to style elements in CSS code</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="images"></ion-icon>
+                        <h3>SVGs & Images</h3>
+                        <p3>Scalable Vector Graphics and Imgaes can improve the design and appearance of a webpage</p3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="color-palette"></ion-icon>
+                        <p2>Styling</p2>
+                    </div>
+                    <div class="text">
+                        <h1>Basic CSS</h1>
+                        <p1>Cascading Style Sheets (CSS) describes how HTML elements should be displayed. CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p1>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <ion-icon name="crop"></ion-icon>
+                        <h3>CSS Box Model</h3>
+                        <p3>Wraps around every element. It consists of: margins, borders, padding, and the actual content</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="desktop"></ion-icon>
+                        <h3>Media Queries</h3>
+                        <p3>Apply different styles for different media types/devices to make the web design responsive</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="grid"></ion-icon>
+                        <h3>Display</h3>
+                        <p3>Most important CSS property for controlling layout of the elements</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="albums"></ion-icon>
+                        <h3>Position</h3>
+                        <p3>Types of positioning method used for an element: static, relative, fixed, absolute or sticky</p3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="apps"></ion-icon>
+                        <p2>Function</p2>
+                    </div>
+                    <div class="text">
+                        <h1>Basic Javascript</h1>
+                        <p1>JavaScript makes HTML pages more dynamic and interactive. Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.</p1>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <ion-icon name="location"></ion-icon>
+                        <h3>Select Element</h3>
+                        <p3>The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="disc"></ion-icon>
+                        <h3>Event Target</h3>
+                        <p3>The addEventListener() sets up a function that will be called whenever the specified event (click) is delivered to the target</p3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>       
+    <!-- FEATURES COMPONENT -->
+    <section class="features-container" id="3features">
+        <div class="container">
+            <h2 id="link">Features</h2>
+            <div class="feature">
+                <div class="text">
+                    <h1>Navigation Bar</h1>
+                    <p1>Navigation Bar is very challenging to do since it is the first part of very webpage. The dropdown bar is quite complex at first since it requries a hover selector <mark>:hover</mark> to display additional hidden links when the cursor moves over. The links are placed in a horizontal layout, similar to most other websites with highlighting features when hovered. A menu button is featured which will be future discussed in 
+                        <a href="url">Toggle Button</a>.
+                    </p1>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="text">
+                    <h1>Flexbox</h1>
+                    <p1>Positioning elements within a wrapbox can a tedious process especially when a webpage requires multiple different designs. Thankfully, this is easily manageable with the help of the <mark>display</mark> property. Setting the value to <mark>flex</mark> introduces additional useful commands that arrange the content easily. Content can bearranged in rows, column. Moreover, they can align, justify, reverse and wrap the content, thus this property can create creative layouts such as grids and alternating series of elements.</p1>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="text">
+                    <h1>Toggle Button</h1>
+                    <p1>Adding a toggle menu button for mobile screens of <mark>&lt;1200px</mark>. This requires a Javascript code to call out a function <mark>toggle</mark> whenever the menu button is clicked. When the event is triggered, the menu button dissappears while navigation bar and close button is displayed and vice versa.</p1>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="text">
+                    <h1>Responsive Website</h1>
+                    <p1>Making a responsive website can be easily done with a proper webpage setup. The webpages consists of 3 different heading and paragraph sizes each. In addition, it includes a <mark>wrapbox</mark> used to keep contents in every section aligned with each other, with paddings to prevent texts from touching the edges of the screen. <mark>Flexbox</mark> properties that changes the layout of elements and <mark>@media</mark> at predefined resolutions to change the each of the headings and paragraphs text size. This makes the website feel neat and professional.</p1>
+                    <div class="cards">
+                        <div class="card">
+                            <h3>Wrapbox </h3>
+                            <div class="grid">
+                                <p3>1360px max-width</p3>
+                                <p3>24px padding</p3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Font Families</h3>
+                            <div class="grid">
+                                <p3>Satoshi-Bold</p3>
+                                <p3>Inter</p3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Resolutions</h3>
+                            <div class="grid">
+                                <p3>Any width</p3>
+                                <p3>&lt;1200px </p3>
+                                <p3>&lt;900px</p3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Heading Sizes</h3>
+                            <div class="grid">
+                                <p3>60px</p3>
+                                <p3>36px</p3>
+                                <p3>24px</p3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Paragraph Sizes</h3>
+                            <div class="grid">
+                                <p3>20px</p3>
+                                <p3>16px</p3>
+                                <p3>14px</p3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!-- RESOURCES COMPONENT -->
+    <section class="resources-container" id="4resources">
+        <div class="container">
+            <h2 id="link">Additional Resources</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="head" id="ionicons-head">
+                        <h3>Ionicons</h3>
+                        <ion-icon name="logo-ionic"></ion-icon>
+                    </div>
+                    <div class="main" id="ionicons-main">
+                        <p2>I use Ionicons to improve the appearance of the webpage</p2>
+                        <div class="content">
+                            <a><p2>Includes: </p2></a>
+                            <a><ion-icon name="checkmark-circle"></ion-icon>
+                                <p2>Developer-Friendly</p2></a>
+                            <a><ion-icon name="checkmark-circle"></ion-icon>
+                                <p2>1,300 Icons</p2></a>
+                            <a><ion-icon name="checkmark-circle"></ion-icon>
+                                <p2>Quick & Simple Installation</p2></a>
+                            <a><ion-icon name="checkmark-circle"></ion-icon>
+                                <p2>Free & Unlimited Usage</p2></a>
+                        </div>
+                        <button onclick=" window.open('https://ionic.io/ionicons', '_blank')">Ionicons 5.5.2</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="head" id="youtube-head">
+                        <h3>Youtube</h3>
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </div>
+                    <div class="main" id="youtube-main">
+                        <p2>Here are some youtube tutorials I watched below</p2>
+                        <div class="content">
+                            <a><button onclick=" window.open('https://ionic.io/ionicons', '_blank')">Youtube Link 1</button></a>
+                            <a><button onclick=" window.open('https://ionic.io/ionicons', '_blank')">Youtube Link 1</button></a>
+                            <a><button onclick=" window.open('https://ionic.io/ionicons', '_blank')">Youtube Link 1</button></a>
+                            <a><button onclick=" window.open('https://ionic.io/ionicons', '_blank')">Youtube Link 1</button></a>
+                            <a><button onclick=" window.open('https://ionic.io/ionicons', '_blank')">Youtube Link 1</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="head" id="vscodelive-head">
+                        <h3>Live Server</h3>
+                        <ion-icon name="radio-outline"></ion-icon>
+                    </div>
+                    <div class="main" id="vscodelive-main">
+                        <p2>A VS Code Extension that helps to live reload feature for dynamic pages</p2>
+                        <div class="content">
+                            <a><p2>Benefits: </p2></a>
+                            <a><ion-icon name="checkmark-circle"></ion-icon>
+                                <p2>Simple Server Setup</p2></a>
+                            <a><ion-icon name="checkmark-circle"></ion-icon>
+                                <p2>Live Changes</p2></a>
+                            <a><ion-icon name="checkmark-circle"></ion-icon>
+                                <p2>Reloads Automatically</p2></a>
+                            <a><ion-icon name="checkmark-circle"></ion-icon>
+                                <p2>Improved Productivity</p2></a>
+                        </div>
+                        <button onclick=" window.open('https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer', '_blank')">Live Server v5.6.1</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <section class="footer-container">
+        <img src="/images-background/footer.svg" alt="footer.bg">
+    </section>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="scripts.js"></script>
+
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Me</title>
+    <link href="about-me.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+</head>
+
+<header>
+    <!-- NAVIGATION COMPONENT -->
+    <section class="header-container">
+        <div class="container">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">
+                            <ion-icon name="home"></ion-icon>
+                            <p2>Home</p2>
+                        </a></li>
+                    <li><a href="about-me.html" class="active">
+                            <ion-icon name="person"></ion-icon>
+                            <p2>About Me</p2>
+                        </a></li>
+                    <li><a href="timeline.html">
+                            <ion-icon name="calendar"></ion-icon>
+                            <p2>Timeline</p2>
+                        </a></li>
+                    <li><a href="website-development.html">
+                            <ion-icon name="layers"></ion-icon>
+                            <p2>Projects</p2>
+                            <ion-icon name="caret-down-outline"></ion-icon>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="#"><p3>Website Development<p3></a></li>
+                            <li><a href="#"><p3>Computer Graphics</p3></a></li>
+                            <li><a href="#"><p3>3D Printing</p3></a></li>
+                            <li><a href="#"><p3>Laser Cutting</p3></a></li>
+                            <li><a href="#"><p3>Arduino</p3></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="menu">
+                    <ion-icon id="icon-menu" name="grid-outline"></ion-icon>
+                    <ion-icon id="icon-close" name="close-circle-outline"></ion-icon>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- HERO COMPONENT -->
+    <section class="hero-container">
+        <img src="images-background/background-hero.svg" alt="hero-bg">
+        <div class="title">
+            <h3>Hello My Name Is</h3>
+            <h1>Chee Poh Hian</h1>
+        </div>
+    </section>
+</header>
+
+<body>
+    <!-- ABOUT COMPONENT -->
+    <section class="about-container" >
+        <div class="container">
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="cube"></ion-icon>
+                        <p2>Background</p2>
+                    </div>
+                    <div class="text">
+                        <h1>Who Am I</h1>
+                        <div class="introduction">
+                            <div class="intro-card">
+                                <h3>Course</h3>
+                                <p3>Diploma in Mechatronics and Robotics (DMRO)</p3>
+                            </div>
+                            <div class="intro-card">
+                                <h3>School</h3>
+                                <p3>School of Mechanical and Aeronautial Engineering (MAE)</p3>
+                            </div>
+                            <div class="intro-card">
+                                <h3>Year</h3>
+                                <p3>Year 2 Student in 2021 Sem 2</p3>
+                            </div>
+                        </div>
+                        <p1>I enjoy building robots along with graphic designing such as making T-shirt designs, Photoshop and Sketching. Though my artistics skills is not very good, I still enjoy making my own designs. I am a fan of simple and minimalist designs such as this theme I made for the whole website. </p1>
+                    </div>
+                </div>
+                <img src="/about-me-images/3d-printing.png" alt="">
+            </div>
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="cube"></ion-icon>
+                        <p2>Elective</p2>
+                    </div>
+                    <div class="text">
+                        <h1>Digital Fabrication</h1>
+                        <p1>I choose Digial Fabrication (EP1000) as my elective as I felt that learning 3d-printing, laser-cutting, website development and etc would be a great experience for an engineering student. This elective would give me the opportunity to apply these skills to create a simple machines or useful products. As of right now, I want to create a Bluetooth Speaker along with other features such as volume control and led matrix display. </p1>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <ion-icon name="cube"></ion-icon>
+                        <h3>Modelling</h3>
+                        <p3>Create Models Using Fusion 360</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="star"></ion-icon>
+                        <h3>3D Printing</h3>
+                        <p3>Keep calm and start 3D Printing</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="brush"></ion-icon>
+                        <h3>Laser Cutting</h3>
+                        <p3>Laser Cut Plywood</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="navigate"></ion-icon>
+                        <h3>Programming</h3>
+                        <p3>Arduino System, Electronics, Microcontroller</p3>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="pricetags"></ion-icon>
+                        <h3>Documention</h3>
+                        <p3>Website Development Using HTML, CSS and Javascript</p3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>       
+    <section class="socials-container">
+        <div class="container">
+            <h2 id="link">Social</h2>
+            <div class="social">
+                <a href=""><ion-icon name="logo-discord"></ion-icon></a>
+                <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href=""><ion-icon name="logo-google"></ion-icon></a>
+                <a href=""><ion-icon name="logo-github"></ion-icon></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <section class="footer-container">
+        <img src="/images-background/footer.svg">
+    </section>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="scripts.js"></script>
+
+</html>

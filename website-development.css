@@ -1,0 +1,670 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, header, body { width: 100%; }
+
+html { 
+    color: rgba(51, 51, 51, 1); 
+    scroll-behavior: smooth;
+}
+
+header, body {
+    overflow-x: hidden;
+    line-height: 1.4;
+}
+
+h1 { font-family: 'Satoshi-Bold', sans-serif; font-size: 60px; }
+h2 { font-family: 'Satoshi-Bold', sans-serif; font-size: 36px; }
+h3 { font-family: 'Satoshi-Bold', sans-serif; font-size: 24px; }
+p1 { font-family: 'Inter', sans-serif; font-size: 20px; }
+p2 { font-family: 'Inter', sans-serif; font-size: 16px; }
+p3 { font-family: 'Inter', sans-serif; font-size: 14px; }
+
+@media screen and (max-width: 450px) {
+    h1 { font-size: 39px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 16px; }
+    p1 { font-size: 13px; }
+    p2 { font-size: 11px; }
+    p3 { font-size: 9px; }
+}
+
+a { text-decoration: none; }
+ul { list-style: none; }
+
+ion-icon { font-size: 16px; }
+
+/* Highlight those with the 'mark' tag */
+mark {
+    padding: 1px 10px;
+    color: rgba(51, 51, 51, 0.8);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+
+/* Change Cursor to Hand Pointer */
+button { cursor: pointer; }
+
+#links { color: royalblue; }
+
+/* Section Containers */
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 1360px;
+    margin: 60px auto;
+    padding: 0 24px;
+}
+
+/* Header Section CSS */
+.header-container {
+    position: absolute;
+    width: 100%;
+}
+.header-container .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Container */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+/* Navigation Container */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 20px;
+}
+/* Navigation Listed */
+.navbar li {
+    position: relative;
+}
+/* Navigation Links */
+.navbar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 450;
+    color: rgba(255, 255, 255, 1);
+    transition: color 500ms, fill 500ms;
+}
+/* Navigation Links Color Change */
+.navbar a:hover{
+    color: rgba(255, 178, 77, 1);
+    fill: rgba(235,7,83, 1);
+}
+/* Highlight Current Navigation Link */
+.navbar .active {
+    color: rgba(255, 25, 100, 1);
+}
+
+/* Dropdown Container - Hidden */
+.dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    top: 40px;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    transition: all 500ms ease;
+}
+/* Dropdown Blocks in Container */
+.dropdown li {
+    display: flex;
+    justify-content: center;
+}
+/* Dropdown Links Color Change */
+.dropdown a {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    color: rgba(235,7,83, 1);
+}
+/* Dropdown Container Display Offset */
+.navbar li:hover > .dropdown {
+    height: 300px ;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/* Menu Icon Set Position */
+.menu ion-icon {
+    position: absolute;
+    display: none;
+    top: 30px;
+    right: 30px;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    z-index: 100;
+    font-size: 30px;
+    color: rgba(235,7,83, 1);
+}
+
+@media screen and (max-width: 900px) {
+    .header-container .container {
+        padding: 0 0;
+    }
+    nav {
+        margin-top: 0;
+    }
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        z-index: 1;
+        bottom: 300px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0 0 15px 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 500ms ease;
+    }
+    .navbar li {
+        width: 100%;
+    }
+    .navbar a {
+        justify-content: flex-start;
+        padding: 20px 30px;
+        color: rgba(51, 51, 51, 0.8);
+    }
+    .dropdown {
+        position: relative;
+        top: 0;
+        border-radius: 0 0 15px 15px;
+    }
+
+    /* Show Menu and Close Button */
+    header.toggle > .header-container {
+        position: relative;
+    }
+    .menu ion-icon {
+        display: block;
+    }
+    .menu #icon-close {
+        display: none;
+    }
+    nav.toggle #icon-menu {
+        display: none;
+    }
+    nav.toggle .menu #icon-close {
+        display: block;
+    }
+    nav.toggle > .navbar {
+        bottom: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .menu ion-icon {
+        top: 28px;
+        right: 28px;
+        font-size: 24px;
+    }
+}
+
+/* Hero Section CSS */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Maximise Background Image*/
+.hero-container img {
+    width: 100%;
+}
+/* Hero title */
+.hero-container .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    padding: 0 24px;
+    opacity: 1;
+    visibility: visible;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 500ms ease;
+}
+.hero-container .title h3 {
+    margin-bottom: 10px;
+}
+.hero-container .title h1 {
+    text-align: center;
+    padding: 15px;
+    border: solid 2px rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 650px) {
+    .hero-container .title h3 {
+       font-size: 16px;
+    }
+    .hero-container .title h1 {
+        font-size: 24px;
+        padding: 10px;
+    }
+}
+
+/* CONTENTS CSS */
+.contents-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contents-container h2 {
+    padding: 0px 40px;
+    color: rgba(255, 255, 255, 0.85);
+    background-color: royalblue;
+    border-radius: 50px;
+}
+.contents-container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+.contents-container .content ion-icon {
+    font-size: 20px;
+    padding-right: 10px;
+}
+.contents-container .content a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: royalblue;
+    text-decoration: underline;
+}
+
+
+
+/* CARDS CSS */
+.cards-container .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards-container .cards{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 60px 0;
+}
+.cards-container .card {
+    max-width: 425px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards-container .text {
+    padding: 16px;
+    text-align: justify;
+}
+.cards-container .card img {
+    max-width: 400px;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px rgba(0, 0, 0, 0.06);
+    border-radius: 100%;
+}
+.cards-container h1 {
+    padding: 10px 0;
+}
+@media screen and (max-width: 1360px) {
+    .cards-container .cards {
+        flex-direction: column;
+    }
+    .cards-container .card {
+        flex-direction: row;
+        max-width: 100%;
+        margin-bottom: 60px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .cards-container .card {
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
+
+/* BASIC CSS */
+.basics-container .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* Cards & Body */
+.basics-container .panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0;
+    padding: 0 16px;
+}
+/* Body Containing Icon & Text */
+.basics-container .body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 16px 60px 16px 0px;
+}
+/* Icon */
+.basics-container .icon {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+.basics-container .body ion-icon {
+    margin-right: 10px;
+}
+/* Text */
+.basics-container .text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: justify;
+}
+.basics-container h1 {
+    margin: 24px 0;;
+}
+.basics-container p1 {
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+/* Cards */
+.basics-container .cards {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.basics-container .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 280px;
+    text-align: center;
+}
+.basics-container .cards ion-icon {
+    padding: 16px;
+    border-radius: 100%;
+    margin-bottom: 24px;
+    font-size: 30px;
+    fill: white;
+    background-color: royalblue;
+}
+/* Alternate Positions of the Image & Body */
+.basics-container .panel:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.basics-container .panel:nth-child(even) .body {
+    padding: 16px 0px 16px 60px;
+}
+@media screen and (max-width: 1200px) {
+    .basics-container .panel, .basics-container .panel:nth-child(even) {
+        flex-direction: column;
+        align-items: center;
+    }
+    .basics-container .body, .basics-container .panel:nth-child(even) .body {
+        padding: 16px 0;
+    }
+    .basics-container .body, .basics-container .text {
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    .basics-container .cards {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contents-container img, .basics-container img {
+        width: 100%;
+        max-width: 800px;
+    }
+}
+
+
+
+/* FEATURES CSS */
+.features-container .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.features-container .feature {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    margin: 60px 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+}
+.features-container .text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 60px 0 24px 0;
+    max-width: 600px ;
+}
+.features-container h1 {
+    margin-bottom: 24px;
+}
+.features-container p1 {
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+.features-container .cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.features-container .card {
+    margin-bottom: 20px;
+}
+.features-container .card h3 {
+    margin-bottom: 6px;
+}
+.features-container .grid {
+    display: flex;
+}
+.features-container .card p3 {
+    padding: 4px 10px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+/* RESOURCES */
+.resources-container .container {
+    display: flex;
+    justify-content: space-between;
+}
+.resources-container h2 {
+    max-width: 100%;
+}
+.resources-container .cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.resources-container .card {
+    width: 325px;
+}
+.resources-container .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px 20px 0 0;
+}
+.resources-container .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    padding: 30px;
+    border-radius: 0 0 20px 20px;
+}
+.resources-container ion-icon {
+    font-size: 25px;
+    margin-right: 10px;
+}
+.resources-container .content {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+.resources-container .content a {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-top: 10px;
+}
+@media screen and (max-width: 1360px) {
+    .resources-container .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .resources-container h2 {
+        text-align: center;
+    }
+    .resources-container .cards {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .resources-container .card {
+        max-width: 400px;
+        margin: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .resources-container .main {
+        height: 320px;
+    }
+}
+
+/* Ionicons Card */
+#ionicons-head, #ionicons-main {
+    border: solid 2px royalblue;
+}
+#ionicons-main button {
+    background-color: royalblue;
+    transition: all 450ms ease;
+}
+#ionicons-main button:hover {
+    color: rgba(255, 255, 255, 0.85);
+    background-color: rgb(65, 81, 225) ;
+}
+
+/* Youtube Card */
+#youtube-head, #youtube-main {
+    border: solid 2px rgba(61, 61, 61, 0.6);
+}
+
+#youtube-main button {
+    background-color:  rgba(61, 61, 61, 1);
+    transition: all 450ms ease;
+}
+#youtube-main button:hover {
+    color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 178, 77, 0.8);
+}
+
+/* live Server Card */
+#vscodelive-head, #vscodelive-main {
+    border: solid 2px rgba(135,90,251, 0.8);
+}
+
+#vscodelive-main button {
+    background-color:  rgba(135,90,251, 0.8);
+    transition: all 450ms ease;
+}
+#vscodelive-main button:hover {
+    color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(92, 35, 248, 0.8);
+}
+
+/* Ionicons & Youtube Icons */
+#ionicons-head ion-icon, #youtube-head ion-icon, #vscodelive-head ion-icon {
+    font-size: 36px;
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+}
+#ionicons-head ion-icon {
+    color: royalblue;
+}
+#youtube-head ion-icon {
+    color: rgba(255, 0, 0, 0.8);
+}
+#vscodelive-head ion-icon {
+    color: rgba(135,90,251, 0.8);
+}
+
+/* Ionicons & Youtube Cards */
+#ionicons-head, #youtube-head, #vscodelive-head {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+.resources-container button {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 450;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+#ionicons-main, #youtube-main, #vscodelive-main {
+    border-top: none;
+}
+#ionicons-head, #youtube-head, #vscodelive-head {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 450px) {
+    .resources-container button {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contents-container .content, .basics-container p1, .features-container p1 {
+        line-height: 1.4;
+    }
+}
+
+
+.footer-container img {
+    width: 100%;
+}

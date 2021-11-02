@@ -1,0 +1,457 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, header, body { width: 100%; }
+
+html { 
+    color: rgba(51, 51, 51, 1); 
+    scroll-behavior: smooth;
+}
+
+header, body {
+    overflow-x: hidden;
+    line-height: 1.4;
+}
+
+h1 { font-family: 'Satoshi-Bold', sans-serif; font-size: 60px; }
+h2 { font-family: 'Satoshi-Bold', sans-serif; font-size: 36px; }
+h3 { font-family: 'Satoshi-Bold', sans-serif; font-size: 24px; }
+p1 { font-family: 'Inter', sans-serif; font-size: 20px; }
+p2 { font-family: 'Inter', sans-serif; font-size: 16px; }
+p3 { font-family: 'Inter', sans-serif; font-size: 14px; }
+
+@media screen and (max-width: 450px) {
+    h1 { font-size: 39px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 16px; }
+    p1 { font-size: 13px; }
+    p2 { font-size: 11px; }
+    p3 { font-size: 9px; }
+}
+
+a { text-decoration: none; }
+ul { list-style: none; }
+
+ion-icon { font-size: 16px; }
+
+mark {
+    padding: 1px 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    font-weight: 450;
+}
+
+#links { color: royalblue; }
+
+/* Section Containers */
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 1360px;
+    margin: 60px auto;
+    padding: 0 24px;
+}
+
+/* Header Section CSS */
+.header-container {
+    position: absolute;
+    width: 100%;
+}
+.header-container .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Container */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+/* Navigation Container */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 20px;
+}
+/* Navigation Listed */
+.navbar li {
+    position: relative;
+}
+/* Navigation Links */
+.navbar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 450;
+    color: rgba(255, 255, 255, 1);
+    transition: color 500ms, fill 500ms;
+}
+/* Navigation Links Color Change */
+.navbar a:hover{
+    color: rgba(255, 178, 77, 1);
+    fill: rgba(235,7,83, 1);
+}
+/* Highlight Current Navigation Link */
+.navbar .active {
+    color: rgba(255, 25, 100, 1);
+}
+
+/* Dropdown Container - Hidden */
+.dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    top: 40px;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    transition: all 500ms ease;
+}
+/* Dropdown Blocks in Container */
+.dropdown li {
+    display: flex;
+    justify-content: center;
+}
+/* Dropdown Links Color Change */
+.dropdown a {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    color: rgba(235,7,83, 1);
+}
+/* Dropdown Container Display Offset */
+.navbar li:hover > .dropdown {
+    height: 300px ;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/* Menu Icon Set Position */
+.menu ion-icon {
+    position: absolute;
+    display: none;
+    top: 30px;
+    right: 30px;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    z-index: 100;
+    font-size: 30px;
+    color: rgba(235,7,83, 1);
+}
+
+@media screen and (max-width: 900px) {
+    .header-container .container {
+        padding: 0 0;
+    }
+    nav {
+        margin-top: 0;
+    }
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        z-index: 1;
+        bottom: 300px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0 0 15px 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 500ms ease;
+    }
+    .navbar li {
+        width: 100%;
+    }
+    .navbar a {
+        justify-content: flex-start;
+        padding: 20px 30px;
+        color: rgba(51, 51, 51, 0.8);
+    }
+    .dropdown {
+        position: relative;
+        top: 0;
+        border-radius: 0 0 15px 15px;
+    }
+
+    /* Show Menu and Close Button */
+    header.toggle > .header-container {
+        position: relative;
+    }
+    .menu ion-icon {
+        display: block;
+    }
+    .menu #icon-close {
+        display: none;
+    }
+    nav.toggle #icon-menu {
+        display: none;
+    }
+    nav.toggle .menu #icon-close {
+        display: block;
+    }
+    nav.toggle > .navbar {
+        bottom: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .menu ion-icon {
+        top: 28px;
+        right: 28px;
+        font-size: 24px;
+    }
+}
+
+/* Hero Section CSS */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Maximise Background Image*/
+.hero-container img {
+    width: 100%;
+}
+/* Hero title */
+.hero-container .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    padding: 0 24px;
+    opacity: 1;
+    visibility: visible;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 500ms ease;
+}
+.hero-container .title h3 {
+    margin-bottom: 10px;
+}
+.hero-container .title h1 {
+    text-align: center;
+    padding: 15px;
+    border: solid 2px rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 650px) {
+    .hero-container .title h3 {
+       font-size: 16px;
+    }
+    .hero-container .title h1 {
+        font-size: 24px;
+        padding: 10px;
+    }
+}
+
+/* Purpose CSS */
+.purpose-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Cards & Body */
+.purpose-container .panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 0 16px;
+}
+/* Body Containing Icon & Text */
+.purpose-container .body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 16px 60px 16px 0px;
+}
+.purpose-container img {
+    width: 50%;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 50px;
+}
+/* Text */
+.purpose-container .text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    line-height: 1.6;
+    width: 100%;
+}
+.purpose-container .text #purpose {
+    max-width: 800px;
+}
+/* Alternate Positions of the Image & Body */
+.purpose-container .panel:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+.purpose-container .panel:nth-child(odd) .body {
+    padding: 16px 0px 16px 60px;
+}
+@media screen and (max-width: 1200px) {
+    .purpose-container .panel, .purpose-container .panel:nth-child(odd) {
+        flex-direction: column;
+        align-items: center;
+    }
+    .purpose-container .body, .purpose-container .panel:nth-child(odd) .body {
+        padding: 16px 0;
+    }
+    .purpose-container .body, .purpose-container .text {
+        align-items: center;
+        width: 100%;
+    }
+    .purpose-container img {
+        width: 100%;
+        max-width: 800px;
+    }
+}
+
+
+
+/* Tools CSS */
+.tools-container {
+    background-color: rgba(69, 99, 231, 0.7);
+}
+.tools-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 0 ;
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+}
+.cards-container .card {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    max-width: 395px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    transition: 0.4s ease-out;
+}
+.cards-container ion-icon {
+    font-size: 40px;
+}
+.cards-container h2 {
+    padding: 10px 0;
+}
+.cards-container .card:hover {
+    transform: scale(1.05);
+    transition: 0.4s ease-out;
+}
+.cards-container .card:hover > h2, .cards-container .card:hover > ion-icon {
+    color: rgba(255, 178, 77, 0.8);
+    transition: 0.4s ease-out;
+}
+
+@media screen and (max-width: 450px) {
+    .cards-container .card {
+        max-width: 300px;
+        height: 290px;
+    }
+    .purpose-container {
+        line-height: 1.4;
+    }
+}
+
+/* Safety CSS */
+.safety-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.safety-container .intro {
+    width: 100%;
+    padding: 16px;
+    margin: 16px 0;
+}
+.safety-container .body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 50px;
+    margin: 30px 0;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+}
+.safety-container .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 40px 0 25px 0;
+    max-width: 900px;
+}
+.safety-container .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+.safety-cards, .hazard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 890px;
+    margin-bottom: 60px;
+}
+
+.safety-cards .card, .hazard-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; 
+    word-wrap: break-word;
+    text-align: center;
+}
+.safety-cards img, .hazard-cards img {
+    max-width: 100%;
+}
+@media screen and (max-width: 900px) {
+    .safety-cards .card, .hazard-cards .card {
+        width: 150px; 
+    }
+}
+@media screen and (max-width: 450px) {
+    .safety-container .body {
+        margin: 16px 0;
+        padding: 24px;
+    }
+    .safety-container .text {
+        margin: 15px 0;
+    }
+    .safety-cards .card, .hazard-cards .card {
+        width: 100px; 
+    }
+    .safety-cards, .hazard-cards {
+        gap: 15px;
+    }
+}
+
+
+.footer-container img {
+    width: 100%;
+}
