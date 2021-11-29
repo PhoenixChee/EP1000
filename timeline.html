@@ -7,6 +7,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Website - Timeline</title>
+    <link href="styles.css" rel="stylesheet">
     <link href="timeline.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
 </head>
@@ -29,19 +30,25 @@
                             <ion-icon name="calendar"></ion-icon>
                             <p2>Timeline</p2>
                         </a></li>
-                    <li><a href="website-development.html">
+                    <li><a href="#">
                             <ion-icon name="layers"></ion-icon>
                             <p2>Projects</p2>
                             <ion-icon name="caret-down-outline"></ion-icon>
                         </a>
                         <ul class="dropdown">
-                            <li><a href="#"><p3>Website Development<p3></a></li>
-                            <li><a href="#"><p3>Computer Graphics</p3></a></li>
-                            <li><a href="#"><p3>3D Printing</p3></a></li>
-                            <li><a href="#"><p3>Laser Cutting</p3></a></li>
-                            <li><a href="#"><p3>Arduino</p3></a></li>
+                            <li><a href="website-development.html"><p3>Website Development<p3></a></li>
+                            <li><a href="knight.html"><p3>Knight Chesspiece</p3></a></li>
+                            <li><a href="music-box.html"><p3>Music Box</p3></a></li>
+                            <li><a href="computer-graphics.html"><p3>Computer Graphics</p3></a></li>
+                            <li><a href="3d-modelling.html"><p3>3D Modelling</p3></a></li>
+                            <li><a href="laser-cutting.html"><p3>Laser Cutting</p3></a></li>
+                            <li><a href="arduino.html"><p3>Arduino</p3></a></li>
                         </ul>
                     </li>
+                    <li><a href="final-project.html">
+                        <ion-icon name="trophy"></ion-icon>
+                        <p2>Final Project</p2>
+                        </a></li>
                 </ul>
                 <div class="menu">
                     <ion-icon id="icon-menu" name="grid-outline"></ion-icon>
@@ -52,7 +59,7 @@
     </section>
     <!-- HERO COMPONENT -->
     <section class="hero-container">
-        <img src="./images-background/background-hero.svg" alt="hero-bg">
+        <img src="/images/images-background/background-hero.svg" alt="hero-bg">
         <div class="title">
             <h3>Weekly Progress</h3>
             <h1>My Digifab Journey</h1>
@@ -62,65 +69,120 @@
 
 <body>
     <!-- CARDS COMPONENT -->
-    <section class="tools-container">
+    <section class="timeline-container">
         <div class="container">
-            <h1>TIMELINE</h1>
+            <h2>Timeline</h2>
             <p1>This is where I document my weekly progress</p1>
+            <div class="weeks">
+                <a href="#week1">
+                    <h2>1</h2></a>
+                <a href="#week2">
+                    <h2>2</h2></a>
+                <a href="#week3">
+                    <h2>3</h2></a>
+                <a href="#week4">
+                    <h2>4</h2></a>
+                <a href="#week5">
+                    <h2>5</h2></a>
+                <a href="#week6">
+                    <h2>6</h2></a>
+                <a href="#week7">
+                    <h2>7</h2></a>
+            </div>
+            <div class="weeks">
+                <a href="#week11">
+                    <h2>11</h2></a>
+                <a href="#week12">
+                    <h2>12</h2></a>
+                <a href="#week13">
+                    <h2>13</h2></a>
+                <a href="#week14">
+                    <h2>14</h2></a>
+                <a href="#week15">
+                    <h2>15</h2></a>
+                <a href="#week16">
+                    <h2>16</h2></a>
+                <a href="#week17">
+                    <h2>17</h2></a>
+            </div>
             <div class="cards-container">
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Final Project</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
+                <div class="card" id="week1">
+                    <div class="title">
+                        <h1>Introduction</h1>
+                        <div class="icon">
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                            <p2>Week 1</p2>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Fablab Safety</h3>
+                        <p2>We learnt about Fablab safety rules and regulations.  It is important to follow the instructions to prevent any accidents from happening or what to do during an emergency.</p2>
+                        <h3>Tools and Documention</h3>
+                        <p2>The FabLab has a large number of tools, equipment and machinery which we can use to fabrcate our projects. In the course of the module, operations of the tools and equipment will be taught. </p2>
+                    </div>
                 </div>
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Week 1</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
+                <div class="card" id="week2">
+                    <div class="title">
+                        <h1>Documentation</h1>
+                        <div class="icon">
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                            <p2>Week 2</p2>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>HTML</h3>
+                        <p2>We learnt that html is a formatting system for displaying material retrieved over the Internet. They are used to structure a webpage and its contents. We will be creating our "about me" webpage content linked to our main page.</p2>
+                        <h3>CSS</h3>
+                        <p2>We learnt that css describes how the elements should be rendered on the webpage and the properties that helps style them. I did not like how Jake Wright use 'id' to define the different sections of the webpage which he could have use 'section' just for clarity. I instead use 'id' when I want to style specific elements. We also added the remaining links to other projects that we will be doing in the future.</p2>
+                        <h3>Markdown</h3>
+                        <p2>Markdown is a way to style text on a webpage. You control the display of the document such as formatting words as bold or italic, adding images, and creating lists. Markdown is easily created by simply typing out in plain text. Although markdown is extremely easy to learn, I however had already spent alot of time doing html and css and feel that markdown lacks styling and layout properties such is flexbox which makes layout customisation possible. Hence I will not use markdown.</p2>
+                    </div>
                 </div>
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Week 2</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
+                <div class="card" id="week3">
+                    <div class="title">
+                        <h1>Version Control</h1>
+                        <div class="icon">
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                            <p2>Week 3</p2>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Github Repository</h3>
+                        <p2>In order to use or build the website properly, we will need to use git and a Github repository. We use the Github Desktop application and link directly into our repository so that it can detect any changes on the site files. We can then commit this to our repository and our website is updated. This is an efficient method if we want to make updates to our website quickly.</p2>
+                    </div>
                 </div>
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Week 3</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
+                <div class="card" id="week4">
+                    <div class="title">
+                        <h1>Computer Graphics</h1>
+                        <div class="icon">
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                            <p2>Week 4</p2>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Adobe Photoshop</h3>
+                        <p2>We are tasked to upload a selfie image of ourselve to remove the background photograph. I use Adobe Photoshop as I am very fond with the software.</p2>
+                        <h3>Gravit</h3>
+                        <p2>I use gravit for instead of Inkscape since it is beginneer friendly - Creating vectors can take within minutes.
+                        I use the software to create PNGs and SVGs such as recreating the Fablab Safety and Hazard Signs. However, I experienced alot of lag and syncing issues which has caused some of my work to be unsaved. Though using Inkscape has not such issues. Learning to use it is complicated and the UI are very cluttered. </p2>
+                    </div>
                 </div>
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Week 4</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
-                </div>
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Week 5</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
-                </div>
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Week 6</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
-                </div>
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Week 7</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
-                </div>
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Week 8</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
-                </div>
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Week 9</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
-                </div>
-                <div class="card">
-                    <ion-icon name="create"></ion-icon>
-                    <h1>Week 10</h1>
-                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p1>
+                <div class="card" id="week5">
+                    <div class="title">
+                        <h1>CAD</h1>
+                        <div class="icon">
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                            <p2>Week 5</p2>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Computer Aided Design</h3>
+                        <p2>We use a set of vector tools that allow us to create our design, simulate and analyze the results without actually building or fabricating the object. Once tested, you can then send the digital data for computer cutting or 3D printing. </p2>
+                        <h3>2D Sketches & 3D Modeling</h3>
+                        <p2>I will be using Fusion 360 to model my designs. For 3D models, there are 3 methods to create them, by Extrusion, Revolution and Sculpting. We will be designing our very own horse chesspiece</p2>
+                        <h3>Parametric Modeling</h3>
+                        <p2>Parameters allow our design to be flexible, allowing changes and modifications to dimensions without changing any part of the design. Almost every part of Fusion 360 can be defined as a function or parameter.</p2>
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,7 +191,7 @@
 
 <footer>
     <section class="footer-container">
-        <img src="./images-background/footer.svg">
+        <img src="/images/images-background/footer.svg">
     </section>
 </footer>
 

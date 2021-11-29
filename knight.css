@@ -1,0 +1,178 @@
+/* Knights CSS */
+.knight-container .introduction {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+.knight-container .introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 450px) {
+    .knight-container .introduction {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* Knight CSS */
+.knight-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* All Icons */
+.knight-container .icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+/* All Texts */
+.knight-container .text {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 24px;
+    max-width: 800px;
+}
+
+/* Panel Body */
+.knight-container .panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 80px 0;
+    padding: 0 16px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+}
+/* Panel Containing Icon & Text */
+.knight-container .panel .body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 16px 60px 16px 0px;
+    margin: 60px 0 24px 0;
+}
+/* Panel Images */
+.knight-container .panel img {
+    max-width: 320px;
+    width: 100%;
+}
+/* Panel Points */
+.knight-container .points {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.knight-container .point {
+    margin-bottom: 20px;
+}
+.knight-container .point h3 {
+    margin-bottom: 6px;
+}
+.knight-container .grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.knight-container .point p3 {
+    padding: 4px 10px;
+    margin: 4px 0;
+    margin-right: 10px;
+    background-color: rgba(73, 71, 71, 0.1);
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .knight-container .panel .body {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .knight-container .panel {
+        flex-direction: column;
+    }
+    .knight-container .panel .body {
+        width: 100%;
+        padding: 0;
+        margin: 20px 0;
+    }
+    .knight-container .panel img {
+        padding: 24px 0;
+    }
+}
+
+.knight-container .content  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+.knight-container .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.knight-container .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.knight-container .card img {
+    display: flex;
+    width: 100%;
+    max-width: 315px;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+}
+@media screen and (max-width: 1200px) {
+    .knight-container .content {
+        width: 100%;
+    }
+    .knight-container .cards {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .knight-container .card img {
+        max-width: 200px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .knight-container .card img {
+        max-width: 150px;
+    }
+}
+
+iframe {
+    width: 100%;
+    max-width: 650px;
+    height: 650px;
+    border: 2px solid rgba(168, 168, 168, 0.1);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    iframe {
+        width: 90%;
+        height: 450px;
+    }
+}

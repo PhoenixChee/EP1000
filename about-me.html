@@ -7,6 +7,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Me</title>
+    <link href="styles.css" rel="stylesheet">
     <link href="about-me.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
 </head>
@@ -29,19 +30,25 @@
                             <ion-icon name="calendar"></ion-icon>
                             <p2>Timeline</p2>
                         </a></li>
-                    <li><a href="website-development.html">
+                    <li><a href=#>
                             <ion-icon name="layers"></ion-icon>
                             <p2>Projects</p2>
                             <ion-icon name="caret-down-outline"></ion-icon>
                         </a>
                         <ul class="dropdown">
-                            <li><a href="#"><p3>Website Development<p3></a></li>
-                            <li><a href="#"><p3>Computer Graphics</p3></a></li>
-                            <li><a href="#"><p3>3D Printing</p3></a></li>
-                            <li><a href="#"><p3>Laser Cutting</p3></a></li>
-                            <li><a href="#"><p3>Arduino</p3></a></li>
+                            <li><a href="website-development.html"><p3>Website Development<p3></a></li>
+                            <li><a href="knight.html"><p3>Knight Chesspiece</p3></a></li>
+                            <li><a href="music-box.html"><p3>Music Box</p3></a></li>
+                            <li><a href="computer-graphics.html"><p3>Computer Graphics</p3></a></li>
+                            <li><a href="3d-modelling.html"><p3>3D Modelling</p3></a></li>
+                            <li><a href="laser-cutting.html"><p3>Laser Cutting</p3></a></li>
+                            <li><a href="arduino.html"><p3>Arduino</p3></a></li>
                         </ul>
                     </li>
+                    <li><a href="final-project.html">
+                        <ion-icon name="trophy"></ion-icon>
+                        <p2>Final Project</p2>
+                        </a></li>
                 </ul>
                 <div class="menu">
                     <ion-icon id="icon-menu" name="grid-outline"></ion-icon>
@@ -52,7 +59,7 @@
     </section>
     <!-- HERO COMPONENT -->
     <section class="hero-container">
-        <img src="./images-background/background-hero.svg" alt="hero-bg">
+        <img src="/images/images-background/background-hero.svg" alt="hero-bg">
         <div class="title">
             <h3>Hello My Name Is</h3>
             <h1>Chee Poh Hian</h1>
@@ -89,7 +96,7 @@
                         <p1>I enjoy building robots along with graphic designing such as making T-shirt designs, Photoshop and Sketching. Though my artistics skills is not very good, I still enjoy making my own designs. I am a fan of simple and minimalist designs such as this theme I made for the whole website. </p1>
                     </div>
                 </div>
-                <img src="./about-me-images/3d-printing.png" alt="">
+                <img src="/images/about-me-images/photoshop.png" alt="">
             </div>
             <div class="panel">
                 <div class="body">
@@ -132,25 +139,24 @@
             </div>
         </div>
     </section>       
-    <section class="socials-container">
-        <div class="container">
-            <h2 id="link">Social</h2>
-            <div class="social">
-                <a href=""><ion-icon name="logo-discord"></ion-icon></a>
-                <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
-                <a href=""><ion-icon name="logo-google"></ion-icon></a>
-                <a href=""><ion-icon name="logo-github"></ion-icon></a>
-            </div>
-        </div>
-    </section>
 </body>
 
 <footer>
+    <!-- FOOTER COMPONENT -->
     <section class="footer-container">
-        <img src="./images-background/footer.svg">
+        <img src="/images/images-background/footer.svg" alt="footer-bg">
+        <div class="container">
+            <h2 id="link">Social</h2>
+            <div class="social">
+                <a href="https://discordapp.com/users/368581606329286656"><ion-icon name="logo-discord"></ion-icon></a>
+                <a href="https://www.instagram.com/ppppohhian/?hl=en"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="mailto:cheepohhian@gmail.com"><ion-icon name="logo-google"></ion-icon></a>
+                <a href="https://github.com/CheePohHian?tab=repositories"><ion-icon name="logo-github"></ion-icon></a>
+            </div>
+        </div>
     </section>
 </footer>
-
+  
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="scripts.js"></script>
