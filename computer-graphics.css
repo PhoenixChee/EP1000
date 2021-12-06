@@ -1,0 +1,82 @@
+/* Introduction CSS */
+.introduction-container .container {
+    display: flex;
+}
+.introduction-container .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    margin: 60px 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+}
+
+/* graphics CSS */
+.graphics-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+}
+.graphics-container .panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 0 16px;
+}
+.graphics-container .body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 16px 60px 16px 0px;
+}
+.graphics-container img {
+    height: 450px;
+    padding: 2px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+.graphics-container .text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    line-height: 1.6;
+    width: 100%;
+}
+
+/* Alternate Positions of the Image & Body */
+.graphics-container .panel:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+.graphics-container .panel:nth-child(odd) .body {
+    padding: 16px 0px 16px 60px;
+}
+
+@media screen and (max-width: 1200px) {
+    .graphics-container .panel, .graphics-container .panel:nth-child(odd) {
+        flex-direction: column;
+        align-items: center;
+    }
+    .graphics-container .body, .graphics-container .panel:nth-child(odd) .body {
+        padding: 16px 0;
+    }
+    .graphics-container .body, .graphics-container .text {
+        align-items: center;
+        width: 100%;
+    }
+    .graphics-container .introduction {
+        flex-wrap: wrap;
+    }
+    .graphics-container .cards {
+        width: 100%;
+    }
+    .graphics-container img {
+        height: auto;
+        max-width: 800px;
+        width: 100%;
+    }
+}

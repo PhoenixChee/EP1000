@@ -98,6 +98,14 @@
 .cards-container h2 {
     padding: 10px 0;
 }
+.cards-container p1 {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+#windows-key {
+    font-size: 20px;
+}
 .cards-container .card:hover {
     transform: scale(1.05);
     transition: 0.4s ease-out;
@@ -106,7 +114,6 @@
     color: rgba(255, 178, 77, 0.8);
     transition: 0.4s ease-out;
 }
-
 @media screen and (max-width: 450px) {
     .cards-container .card {
         max-width: 300px;
