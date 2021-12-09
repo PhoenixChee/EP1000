@@ -1,16 +1,29 @@
-/* Introduction CSS */
-.introduction-container .container {
+/* Graphics CSS */
+.graphics-container .introduction {
     display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
 }
-.introduction-container .body {
+.graphics-container .introduction {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 30px;
-    margin: 60px 0;
-    background-color: rgba(0, 0, 0, 0.03);
-    border-radius: 20px;
+    padding: 10px;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 450px) {
+    .graphics-container .introduction {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 /* graphics CSS */
@@ -18,65 +31,142 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0;
 }
+/* All Icons */
+.graphics-container .icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+/* All Texts */
+.graphics-container .text {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 24px;
+    max-width: 800px;
+}
+
+/* Panel Body */
 .graphics-container .panel {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 40px 0;
+    width: 100%;
+    margin: 80px 0;
     padding: 0 16px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
 }
-.graphics-container .body {
+/* Panel Containing Icon & Text */
+.graphics-container .panel .body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 50%;
+    padding: 16px 100px 16px 0px;
+    margin: 60px 0 24px 0;
+}
+/* Panel Images */
+.graphics-container .panel img {
+    max-width: 260px;
     width: 100%;
-    padding: 16px 60px 16px 0px;
 }
-.graphics-container img {
-    height: 450px;
-    padding: 2px;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-}
-.graphics-container .text {
+/* Panel Points */
+.graphics-container .points {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    line-height: 1.6;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
-
-/* Alternate Positions of the Image & Body */
-.graphics-container .panel:nth-child(odd) {
-    flex-direction: row-reverse;
+.graphics-container .point {
+    margin-bottom: 20px;
 }
-.graphics-container .panel:nth-child(odd) .body {
-    padding: 16px 0px 16px 60px;
+.graphics-container .point h3 {
+    margin-bottom: 6px;
+}
+.graphics-container .grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.graphics-container .point p3 {
+    padding: 4px 10px;
+    margin: 4px 0;
+    margin-right: 10px;
+    background-color: rgba(73, 71, 71, 0.1);
+    border-radius: 20px;
 }
 
 @media screen and (max-width: 1200px) {
-    .graphics-container .panel, .graphics-container .panel:nth-child(odd) {
-        flex-direction: column;
-        align-items: center;
-    }
-    .graphics-container .body, .graphics-container .panel:nth-child(odd) .body {
-        padding: 16px 0;
-    }
-    .graphics-container .body, .graphics-container .text {
-        align-items: center;
+    .graphics-container .panel .body {
         width: 100%;
     }
-    .graphics-container .introduction {
-        flex-wrap: wrap;
+}
+@media screen and (max-width: 900px) {
+    .graphics-container .panel {
+        flex-direction: column;
+    }
+    .graphics-container .panel .body {
+        width: 100%;
+        padding: 0;
+        margin: 20px 0;
+    }
+    .graphics-container .panel img {
+        padding: 24px 0;
+    }
+}
+
+.graphics-container .content  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+.graphics-container .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.graphics-container .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.graphics-container .card img {
+    display: flex;
+    width: 100%;
+    max-height: 420px;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+}
+.graphics-container .text ion-icon {
+    padding: 8px;
+    font-size: 30px;
+    color: royalblue;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 100%;
+}
+@media screen and (max-width: 1200px) {
+    .graphics-container .content {
+        width: 100%;
     }
     .graphics-container .cards {
-        width: 100%;
+        flex-wrap: wrap;
+        gap: 5px;
     }
-    .graphics-container img {
-        height: auto;
-        max-width: 800px;
-        width: 100%;
+    .graphics-container .card img {
+        max-height: 420;
+        border-radius: 25px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .graphics-container .card img {
+        border-radius: 15px;
     }
 }
