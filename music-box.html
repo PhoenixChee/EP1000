@@ -67,6 +67,346 @@
     </section>
 </header>
 
+<!-- SECTION -->
+<body>
+    <section class="music-container">
+        <div class="container">
+            <h2>Computer Controlled Cutting</h2>
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="bookmarks"></ion-icon>
+                        <p2>Requirements</p2>
+                    </div>
+                    <div class="text">
+                        <h1>What to do</h1>
+                        <p1>We are to model our own 3D model of a music box using Fusion 360. The music box must be paramentic to allow quick changes to the dimensions. Here are the requirements for the music box:</p1>
+                        <div class="points">
+                            <div class="point">
+                                <h3>Dimensions</h3>
+                                <div class="grid">
+                                    <p3>Wood 3mm Thickness</p3>
+                                    <p3>Any appropriate size</p3>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <h3>Musical Mechanism Dimensions</h3>
+                                <div class="grid">
+                                    <p3>X-4.7cm</p3>
+                                    <p3>Y-3.7cm</p3>
+                                    <p3>Z-3.2cm</p3>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <h3>Features</h3>
+                                <div class="grid">
+                                    <p3>Movable Lid</p3>
+                                    <p3>Engravings</p3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./images/music-box-images/music-box-mechanism.png">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <ion-icon name="settings"></ion-icon>
+                    <p2>Parameters</p2>
+                </div>
+                <img id="parameter" src="./images/music-box-images/parameters.png">
+                <div class="text">
+                    <p1>This is the parameters settings I use for my music box. I use same sized tabs and odd numbers of tabs since they are reference from the center.  </p1>
+                </div>
+                <div class="icon">
+                    <ion-icon name="cube"></ion-icon>
+                    <p2>3D Models</p2>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/side-sketch.png">
+                        <p3>Side Sketch</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/side-extrude.png">
+                        <p3>Side Extrude</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>I begin by sketching the side piece including the tabs and holes. I want the box to have legs so I sketched a trapizium below the bottom tab. To ensure the hole is not an exact fit for the hinge of the top piece, I offset the 3mm construction circle to 0.05mm. When the sketch was done, the whole piece including the tabs are extruded 3mm. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/side-cut-1.png">
+                        <p3>Side Tab Cutout</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/side-pattern-1.png">
+                        <p3>Side Tab Patterning</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/side-cut-2.png">
+                        <p3>Side Tab Cutout</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/side-pattern-2.png">
+                        <p3>Side Tab Patterning</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>Next, using the same sketch I cut out the bottom and side tabs individually so that I can use the rectangular pattern on the features seperately. I symmetrically offset them using the same length of each tabs along the box's length and height respectively. Once the side piece is done I fillet the corners around the legs. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/side-final.png">
+                        <p3>Side Final</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>Once the side piece is done I fillet the corners around the legs. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/front-sketch.png">
+                        <p3>Front Sketch</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>The second component is made using the side piece as the parent. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/front-extrude.png">
+                        <p3>Front Extrude</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/front-cut.png">
+                        <p3>Front Tab Cutout</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/front-pattern.png">
+                        <p3>Front Tab Patterning</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/front-final.png">
+                        <p3>Front Final</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>The front piece can be done similarly to the piece before. However, I do not neccesarily have to make the tabs at the sides. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/side-mirror.png">
+                        <p3>Side Mirror</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/front-collide.png">
+                        <p3>Intersecting</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>A midplane is constructed on the bisect of the front piece to mirror the side piece on the other side. Notice that the side pieces are intersecting into the front piece. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/front-combine-1.png">
+                        <p3>Combine Front</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/front-combine-2.png">
+                        <p3>Front Final</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>To cut the tabs for the front piece, the combine tool is used. Using the side pieces as tool bodies and keeping tools, the tabs are cut out of the side piece and they no longer intersect. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/back-sketch.png">
+                        <p3>Back Sketch</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/back-extrude.png">
+                        <p3>Back Extrude</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/back-combine-1.png">
+                        <p3>Combine Back</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/back-combine-2.png">
+                        <p3>Back Final</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>The third component is made using project geometry with reference to the front piece. A similar process to the cut out the tabs for the back piece, the combine tool is used. I did not mirror the front piece because I want the the lid to open more than 180°. Hence the height of the back piece will have to be shorter than the front. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/bottom-plane.png">
+                        <p3>Bottom Plane</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/bottom-sketch.png">
+                        <p3>Bottom Sketch</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/bottom-extrude.png">
+                        <p3>Bottom Extrude</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>A construction plane is used on the bottom surface area of the tabs to make the bottom piece. A rectangle is sketched and constrained onto the edges of the other pieces. It was then extruded to thickness, intersecting onto the existing sides. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/bottom-combine-1.png">
+                        <p3>Combine Bottom</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/bottom-combine-2.png">
+                        <p3>Bottom Final</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>The combine tool to cut out the tabs with existing pieces as tool bodies. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/top-plane.png">
+                        <p3>Top Plane</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/top-sketch.png">
+                        <p3>Top Sketch</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>Another construction plane is used on the cutout area of the front piece. The process to make the top piece can be done similar to the bottom piece. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/top-hinge.png">
+                        <p3>Hinge</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/top-lid.png">
+                        <p3>Lid</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>A closer inspection of the top piece, the hinge has to be 3mm in length. Notice that there is a small gap between the hinge and the hole because of 0.05mm offset from the side piece. The top piece has a small protrusion so that opening the lid is easier.</p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/top-extrude.png">
+                        <p3>Top Extrude</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/music-box.png">
+                        <p3>Music Box Completed</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>The music box is completed, time to add engravings to it. </p1>
+                </div>
+                <iframe src="https://ichat2368.autodesk360.com/shares/public/SH35dfcQT936092f0e43f958e890504fce52?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            </div>
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="checkbox"></ion-icon>
+                        <p2>Preparations</p2>
+                    </div>
+                    <div class="text">
+                        <h1>Laser Cutting</h1>
+                        <p1>The Music Box Pieces are exported as DWG files and opened in CorelDraw to laser cut. The japanese wave image is exported as PNG file in CorelDraw to engrave. The following are the machine settings: </p1>
+                        <div class="points">
+                            <div class="point">
+                                <h3>Laser Cutter</h3>
+                                <div class="grid">
+                                    <p3>Universal
+                                        VLS6.60</p3>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <h3>Vector</h3>
+                                <div class="grid">
+                                    <p3>Speed 15%</p3>
+                                    <p3>Power 40%</p3>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <h3>Rastor</h3>
+                                <div class="grid">
+                                    <p3>Speed 50%</p3>
+                                    <p3>Power 50%</p3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./images/music-box-images/universal-laser-cutting-machine.png">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <ion-icon name="folder"></ion-icon>
+                    <p2>Files</p2>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/music-box.svg">
+                        <p3>Music Box Laser Cut</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/music-box-images/japanese-wave.png">
+                        <p3>Japanese Wave</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>There are a total of 6 pieces to laser cut. The image chosen has to be black and white for the laser cut to engrave properly. Preferbly, a clear transparent background image will be ideal for engraving, otherwise the power will have to be adjusted for coloured backgrounds if you might not want the laser cutter to make a section of the wood darkened. </p1>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="flag"></ion-icon>
+                        <p2>Challenges</p2>
+                    </div>
+                    <div class="text">
+                        <h1>What happened</h1>
+                        <p1>The final laser turned out to be of the right size to fit the music crank inside. It was at first hard to fit the pieces together as there were no tolerance in tabs. Since the music box is laser cut using 3mm plywood, the tabs will compress overtime and make assembly easier. <br> <br>
+                        The engraved image turned out to be beyond my expectations as it look very good in detailed.
+                        <br> <br>
+                        Open image in new tab to enlarge the photo to see the details. </p1>
+                    </div>
+                </div>
+                <img src="./images/music-box-images/music-box-done-2.png">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <ion-icon name="build"></ion-icon>
+                    <p2>Assembly</p2>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/music-box-images/music-box-done-1.png">
+                        <p3>Finished Music Box</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>To fit the music crank, I have to manually hand drill the side piece using a 6.5mm drill bit. Then I slide the side piece through the handle and into position. I use hot glue and stick the music crank onto the base and leave it to harden. Lastly, I fit the rest of the pieces together. I need not have to use wood glue to stick the piece together since they were a tight fit altogether. </p1>
+                </div>
+                <div class="text">
+                    <h2>How to improve</h2>
+                    <p1>In general, I feel a 60x60x40mm music box might is the perfect size for fitting the music crank inside. </p1>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
 <footer>
     <section class="footer-container">
         <img src="./images/images-background/footer.svg">
