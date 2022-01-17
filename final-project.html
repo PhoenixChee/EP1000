@@ -59,11 +59,201 @@
     <section class="hero-container">
         <img src="./images/images-background/background-hero.svg" alt="hero-bg">
         <div class="title">
-            <h3>Final Project</h3>
-            <h1>3D Maze</h1>
+            <h3>Idea</h3>
+            <h1>RGB Audio Visualiser</h1>
         </div>
     </section>
 </header>
+
+<body>
+    <!-- CONTENTS -->
+    <section class="contents-container">
+        <div class="container">
+            <h2>Contents</h2>
+            <div class="content">
+                <a href="#content-1">
+                    <ion-icon name="settings"></ion-icon>
+                    <p1>Function</p1>
+                    <p3>What does it do?</p3>
+                </a>
+                <a href="#content-2">
+                    <ion-icon name="star"></ion-icon>
+                    <p1>Features</p1>
+                    <p3>What has it have?</p3>
+                </a>
+            </div>
+            <div class="content">
+                <a href="#content-3">
+                    <ion-icon name="construct"></ion-icon>
+                    <p1>Resources Required</p1>
+                    <p3>How to build it?</p3>
+                </a>
+                <a href="#content-4">
+                    <ion-icon name="cash"></ion-icon>
+                    <p1>Bill of Materials</p1>
+                    <p3>How much it cost?</p3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- FUNCTION -->
+    <section class="function-container" id="content-1">
+        <div class="container">
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="bookmarks"></ion-icon>
+                        <p2>Function</p2>
+                    </div>
+                    <div class="text">
+                        <h1>What does it do?</h1>
+                        <p1>It is a Audio Visualiser that uses LED 8x8 Matrix that shines through acrylic sticks and simply changes its color by using frequency information from the audio and feeding this data through the LEDs. </p1>
+                        <p1>Audio waveform visualizers create animated waveforms (audiograms) that shift with the rhythm, loudness, and frequency of the audio. </p1>
+                        <p1>It able to illuminate your room as there will be other features such as operating as a normal glow lamp. </p1>
+                    </div>
+                </div>
+                <img src="./images/arduino-images/arduino-uno-r3.png">
+            </div>
+        </div>
+    </section>
+    <!-- FEATURES COMPONENT -->
+    <section class="features-container" id="content-2">
+        <div class="container">
+            <div class="icon">
+                <ion-icon name="browsers"></ion-icon>
+                <p2>Features</p2>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="./images/final-project/rgb-lighting.png" alt="2">
+                    <div class="text">
+                        <h2>2 Operating Modes</h2>
+                        <p2>The 2 operating modes are Audio Visualiser and Glow Lamp. </p2>
+                        <p2>How this works is that the Audio Visualiser uses a microphone to receive sound input. Hence LEDs will change its brightness or colours accordingly. </p2>
+                        <p2>The other mode simply works by removing the input from the microphone and operates as normal LEDs. </p2>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/final-project/glow-lamp.png" alt="3">
+                    <div class="text">
+                        <h2>Lightning Features</h2>
+                        <p2>There will be various lighting profiles I plan to showcase in this project. As of now there will be 2 lighting profiles. </p2>
+                        <p2>First, there will be "RGB" Profile that cycles the colours continuously. </p2>
+                        <p2>Second is the "Single-colour" Profile that will have LEDs operate at colours set by the user. </p2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- RESOURCES COMPONENT -->
+    <section class="resources-container" id="content-3">
+        <div class="container">
+            <div class="icon">
+                <ion-icon name="layers"></ion-icon>
+                <p2>Resources</p2>
+            </div>
+            <div class="resources">
+                <div class="cards">
+                    <div class="card">
+                        <ion-icon name="layers"></ion-icon>
+                        <h3>CAD Design</h3>
+                    </div>
+                    <div class="text">
+                        <p2>Design 3D-printed casing</p2>
+                        <p2>Design Lasercut supports plates and sticks</p2>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <ion-icon name="cut"></ion-icon>
+                        <h3>Laser Cutting</h3>
+                    </div>
+                    <div class="text">
+                        <p2>Wooden Support Plates</p2>
+                        <p2>Acrylic Sticks</p2>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <ion-icon name="print"></ion-icon>
+                        <h3>3D Printing</h3>
+                    </div>
+                    <div class="text">
+                        <p2>PLA Base Plate with component slots</p2>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <ion-icon name="game-controller"></ion-icon>
+                        <h3>Microcontroller</h3>
+                    </div>
+                    <div class="text">
+                        <p2>Arduino Nano</p2>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <ion-icon name="enter"></ion-icon>
+                        <h3>Input Devices</h3>
+                    </div>
+                    <div class="text">
+                        <p2>LM393 Sound Sensor (Microphone)</p2>
+                        <p2>Outemu Red Linear Mechanical Switches</p2>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <ion-icon name="exit"></ion-icon>
+                        <h3>Output Devices</h3>
+                    </div>
+                    <div class="text">
+                        <p2>Neopixel WS2812 RGB 8x8 Matrix</p2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BILLS COMPONENT -->
+    <section class="bills-container" id="content-4">
+        <div class="container">
+            <div class="icon">
+                <ion-icon name="wallet"></ion-icon>
+                <p2>Material Bills</p2>
+            </div>
+            <div class="table">
+                <div class="row" id="top-row">
+                    <div class="number"><p2>S/N</p2></div>
+                    <div class="quantity"><p2>Quantity</p2></div>
+                    <div class="text"><p2>Item Description</p2></div>
+                    <div class="cost"><p2>Cost</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>1</p2></div>
+                    <div class="quantity"><p2>1</p2></div>
+                    <div class="text"><p2>Arduino Nano</p2></div>
+                    <div class="cost"><p2>$6</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>2</p2></div>
+                    <div class="quantity"><p2>1</p2></div>
+                    <div class="text"><p2>LM393 Sound Sensor</p2></div>
+                    <div class="cost"><p2>$2</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>3</p2></div>
+                    <div class="quantity"><p2>1</p2></div>
+                    <div class="text"><p2>Neopixel WS2812 RGB 8x8 Matrix</p2></div>
+                    <div class="cost"><p2>$6</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>4</p2></div>
+                    <div class="quantity"><p2>3</p2></div>
+                    <div class="text"><p2>Outemu Red Linear Mechanical Switches</p2></div>
+                    <div class="cost"><p2>$2</p2></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <footer>
     <section class="footer-container">

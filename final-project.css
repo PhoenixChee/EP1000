@@ -1,0 +1,331 @@
+/* Content CSS */
+.contents-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    font-weight: bold;
+}
+.contents-container p2 {
+    color: rgba(100, 100, 100, 1);
+}
+.contents-container p3 {
+    color: rgba(100, 100, 100, 1);
+    font-weight: normal;
+    transition: all 500ms ease;
+}
+.contents-container .content {
+    display: flex;
+    gap: 16px;
+}
+.contents-container .content a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding: 16px;
+    color:rgba(51, 51, 51, 1);
+    border-radius: 20px;
+    border: solid 2px rgba(0, 0, 0, 0.06);
+    transition: all 500ms ease;
+}
+.contents-container .content ion-icon {
+    font-size: 50px;
+    padding-right: 10px;
+    color: royalblue;
+    transition: all 500ms ease;
+}
+.contents-container .content a:hover {
+    color:rgba(255, 255 ,255, 1);
+    background-color: royalblue;
+    border-radius: 20px;
+    border: solid 2px rgba(0, 0, 0, 0.06);
+    transform: scale(1.035);
+}
+.contents-container .content a:hover ion-icon {
+    color: rgba(255, 255, 255, 1);
+}
+.contents-container .content a:hover p3 {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* All Icons Container */
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+
+/* Function CSS */
+.function-container .introduction {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+.function-container .introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+}
+@media screen and (max-width: 450px) {
+    .function-container .introduction {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+.function-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* All Texts */
+.function-container .text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+}
+.function-container .text p1{
+    text-align: justify;
+}
+/* Panel Body */
+.function-container .panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0;
+    padding: 0 16px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+}
+/* Panel Containing Icon & Text */
+.function-container .panel .body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 16px 60px 16px 0px;
+    margin: 60px 0 24px 0;
+}
+/* Panel Images */
+.function-container .panel img {
+    max-width: 300px;
+    width: 100%;
+}
+@media screen and (max-width: 1200px) {
+    .function-container .panel .body {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .function-container .panel {
+        flex-direction: column;
+    }
+    .function-container .panel .body {
+        width: 100%;
+        padding: 0;
+        margin: 20px 0;
+    }
+    .function-container .panel img {
+        padding: 24px 0;
+    }
+}
+
+/* Features CSS */
+.features-container .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.features-container .cards{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 40px 0;
+    padding: 0 16px;
+}
+.features-container .card {
+    max-width: 425px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.features-container .text {
+    padding: 16px;
+    text-align: justify;
+}
+.features-container .card img {
+    max-width: 400px;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px rgba(0, 0, 0, 0.06);
+    border-radius: 100%;
+}
+.features-container h1 {
+    padding: 10px 0;
+}
+@media screen and (max-width: 1360px) {
+    .features-container .cards {
+        flex-direction: column;
+    }
+    .features-container .card {
+        flex-direction: row;
+        max-width: 100%;
+        margin-bottom: 60px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .features-container .cards {
+        padding: 0;
+    }
+    .features-container .card {
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
+
+/* Resources CSS */
+.resources-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resources-container .resources {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+.resources-container .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 300px;
+    margin: 16px;
+}
+.resources-container .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 24px;
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+    background: royalblue;
+    border-radius: 30px 30px 0 0;
+}
+.resources-container .card ion-icon {
+    font-size: 30px;
+}
+.resources-container .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+    border: solid 2px rgba(0, 0, 0, 0.06);
+    border-radius: 0 0 30px 30px;
+}
+@media screen and (max-width: 1360px) {
+    .resources-container .cards {
+        width: 250px;
+        height: 250px;
+    }
+    .resources-container .text, .resources-container .card {
+        padding: 16px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .resources-container .text, .resources-container .card {
+        padding: 10px;
+    }
+    .resources-container .card {
+        border-radius: 15px 15px 0 0;
+    }
+    .resources-container .text {
+        border-radius: 0 0 15px 15px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .resources-container .cards {
+        height: 150px;
+    }
+}
+
+/* Bills CSS */
+.bills-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bills-container .table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    width: 100%;
+    max-width: 1000px;
+}
+.bills-container .row {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    margin: 8px 0;
+    width: 100%;
+}
+.bills-container #top-row {
+    font-weight: bold;
+    color:rgba(255, 255 ,255, 1);
+    background-color: royalblue;
+    border-radius: 16px;
+}
+.bills-container .number, .bills-container .quantity {
+    border-right: 1px solid rgba(51, 51, 51, 1);
+}
+
+.bills-container .number {
+    width: 10%;
+    text-align: center;
+}
+.bills-container .quantity {
+    width: 15%;
+    text-align: center;
+}
+.bills-container .number {
+    border-radius: 16px 0 0 16px;
+}
+.bills-container .text {
+    width: 60%;
+    padding: 0 12px;
+}
+.bills-container .cost {
+    width: 15%;
+    padding: 0 12px;
+    border-left: 1px solid rgba(51, 51, 51, 1);
+}
+@media screen and (max-width: 450px) {
+    .bills-container .container {
+        padding: 0 16px;
+    }
+}
