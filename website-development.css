@@ -1,32 +1,51 @@
-/* CONTENTS CSS */
+/* Content CSS */
 .contents-container .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.contents-container h2 {
-    padding: 0px 40px;
-    color: rgba(255, 255, 255, 0.85);
-    background-color: royalblue;
-    border-radius: 50px;
+    gap: 16px;
+    font-weight: bold;
 }
 .contents-container .content {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 20px 0;
-    line-height: 1.8;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
 }
-.contents-container .content ion-icon {
-    font-size: 20px;
-    padding-right: 10px;
-}
-.contents-container .content a {
+.contents-container a {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 16px;
+    color:rgba(51, 51, 51, 1);
+    border: solid 2px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    transition: all 500ms ease;
+}
+.contents-container ion-icon {
+    font-size: 50px;
     color: royalblue;
-    text-decoration: underline;
+    transition: all 500ms ease;
+}
+.contents-container p3 {
+    font-weight: normal;
+    color: rgba(100, 100, 100, 1);
+    transition: all 500ms ease;
+}
+.contents-container a:hover {
+    color:rgb(255, 255, 255);
+    background-color: royalblue;
+    border: solid 2px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    transform: scale(1.035);
+    transition: all 500ms ease;
+}
+.contents-container a:hover > ion-icon, .contents-container a:hover > p3 {
+    color: rgba(255, 255, 255, 1);
 }
 
 
@@ -54,6 +73,7 @@
     text-align: justify;
 }
 .cards-container .card img {
+    width: 100%;
     max-width: 400px;
     background-color: rgb(255, 255, 255);
     border: solid 2px rgba(0, 0, 0, 0.06);
@@ -380,6 +400,7 @@
     padding: 10px;
     border-radius: 8px;
     border: none;
+    cursor: pointer;
 }
 #ionicons-main, #youtube-main, #vscodelive-main {
     border-top: none;

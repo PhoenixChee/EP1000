@@ -79,19 +79,19 @@
                     </div>
                     <div class="text">
                         <h1>What to do</h1>
-                        <p1>We are to write simple programs with the Arduino IDE and Uno R3 board. We test the programs on the TinkerCAD simulator first before wiring and implementing the actual circuits on the physical Arduino board. Here are the programming assignments :</p1>
+                        <p1>We are to write simple programs with the Arduino IDE and Uno R3 board. We test the programs on the TinkerCAD simulator first before wiring and implementing the actual circuits on the physical Arduino board. Here are the programming assignments: </p1>
                         <div class="points">
                             <div class="point">
                                 <h3>Simple LED Control</h3>
                                 <div class="grid">
-                                    <p3>blinking LEDs</p3>
+                                    <p3>Blinking LEDs</p3>
                                 </div>
                             </div>
                             <div class="point">
                                 <h3>One Switch Many States</h3>
                                 <div class="grid">
                                     <p3>4 LED States</p3>
-                                    <p3>Debouncing Error</p3>
+                                    <p3>Debouncing Loop</p3>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                     </div>
                     <div class="text">
                         <h1>Blinking LEDs</h1>
-                        <p1>In a loop, to make the LED to blink, add delays in between the HIGH and LOW values of the LED digital pin. </p1>
+                        <p1>In a loop, to make the LED to blink, I added delays in between the HIGH and LOW values of the each LED digital pin. </p1>
                     </div>
                 </div>
                 <img src="./images/arduino-images/blinking-using-delay.svg">
@@ -156,7 +156,7 @@
                     </div>
                 </div>
                 <div class="text">
-                    <p1>One of the issues faced was the bouncing of the switch that might cause incorrect states to be read. Without proper debouncing, multiple inputs may be read in quick succession when only a single input is intended, which will cause issues in the code. </p1>
+                    <p1>One of the issues faced was the bouncing of the switch that might cause incorrect states to be read. Without proper debouncing, multiple inputs may be read in quick succession when only a single input is intended, which will cause issues in the code. Also take note that this button in this assignment is <mark>Active LOW</mark>. </p1>
                 </div>
             </div>
             <div class="panel">
@@ -169,7 +169,7 @@
                         <h1>millis()</h1>
                         <p1>Before explaining the code, it is important to understand <mark>millis()</mark>. </p1>
                         <p1><mark>millis()</mark> returns the number of milliseconds passed since the board began running the program. It acts as an internal clock and will be used multiple times during the program. </p1>
-                        <p1>The data type <mark>millis()</mark> use is unsigned long. Hence <mark>startPressed</mark>, <mark>debounceDelay</mark> and <mark>pressDelay</mark> are unsigned long data type. </p1>
+                        <p1>The data type <mark>millis()</mark> use is unsigned long. Hence <mark>startPressed</mark>, <mark>debounceDelay</mark> and <mark>pressDelay</mark> are unsigned long data types. </p1>
                         <p1>Just like above exercise, each LED and button was assigned to a pin and variables are declared. </p1>
                     </div>
                 </div>
@@ -183,7 +183,7 @@
                     </div>
                     <div class="text">
                         <h1>Debouncing Loop</h1>
-                        <p1>Next is the debouncing loop. First, the button reading is constantly taken. Once the button is pressed and the reading changes, the time <mark>millis()</mark> is taken and stored as the <mark>startPress</mark>. This condition only triggers once there is a change in the button state. Due to the bouncing of the switch, multiple readings will be taken and stored in quick succession. </p1>
+                        <p1>Next is the debouncing loop. First, the button reading is constantly taken. Once the button is pressed and the reading changes, the time <mark>millis()</mark> is taken and stored as the <mark>startPress</mark>. This condition only triggers once there is a change in the <mark>buttonState</mark>. Note that due to the bouncing of the switch, multiple readings will be taken and stored in quick succession. </p1>
                     </div>
                 </div>
                 <img src="./images/arduino-images/debouncing-loop.svg">
@@ -197,8 +197,8 @@
                     <div class="text">
                         <h1>Change Condition</h1>
                         <p1>At the same time, the difference between the current time and the stored <mark>startPress</mark> is constantly being calculated. Once the difference exceeds the value set by debounceDelay (50ms), it means that the switch has not "bounced" for 50ms and the input has settled. The next part of the code will be executed. </p1>
-                        <p1>The program will need to check if button state has changed and if the reading of the button is LOW (pressed), it will incease LEDState by '1'. </p1>
-                        <p1>The LEDState refers to the cases of the switch function. Once it reaches '5', the counter will reset to '0' since (5%5) will give a remainder of '0'. </p1>
+                        <p1>The program will need to check if <mark>buttonState</mark> has changed and if the reading of the button is LOW (pressed), it will incease LEDState by 1. </p1>
+                        <p1>The LEDState refers to the cases of the switch function. Once it reaches '5', the counter will reset to '0' since (5%5) will give a remainder of 0. </p1>
                     </div>
                 </div>
                 <img src="./images/arduino-images/ledstate-change-condition.svg">
@@ -212,7 +212,6 @@
                     <div class="text">
                         <h1>Off Condition</h1>
                         <p1>To turn off all the LEDs after pressing down the button for 3s, another 'if' statement is used in the loop. It works in the same way previous condition, where it compares the <mark>startPress</mark> and the current time and finds it difference. Once the difference exceeds the <mark>pressDelay</mark> (3000ms), and the button reading is LOW (pressed), the LEDstate is '0', turning the LEDs off. </p1>
-                        <p1>During all this, the function 'decode' has been continously run and change in LEDState will cause a switch case. </p1>
                     </div>
                 </div>
                 <img src="./images/arduino-images/ledstate-off-condition.svg">
@@ -225,10 +224,11 @@
                     </div>
                     <div class="text">
                         <h1>Update</h1>
-                        <p1>The last button state is also being continously updated. </p1>
+                        <p1>The <mark>lastButtonState</mark> is also being continously updated. </p1>
+                        <p1>During all this, the function 'decode' has been continously run and change in LEDState will cause a switch case. </p1>
                     </div>
                 </div>
-                <img src="./images/arduino-images/update-button-and-led-state.svg">
+                <img src="./images/arduino-images/update-button-a<mark>lastButtonState</mark>.svg">
             </div>
             <div class="panel">
                 <div class="body">
@@ -239,8 +239,8 @@
                     <div class="text">
                         <h1>Switch</h1>
                         <p1>The function decode contains the switch cases to control the LEDs. </p1>
-                        <p1>To make it blink, instead of delay, <mark>millis()</mark> was used. Adding delay is possible but however, the program is unable to detect another button press if the LEDs are blinking using delays. </p1>
-                        <p1>To have the LEDs blink using <mark>millis()</mark>, the reading at a certain point in time and finds the remainder when divided by 2, which results in either a '0' (OFF) or '1' (ON). However, just using <mark>millis()</mark> will cause the LED to blink every millisecond, which would be too fast. As such, the reading is divided by 100, which will cause it to blink every 100ms as it will round the value to the nearest 100ms. The blinking intevals can be changed by changing this value. </p1>
+                        <p1>To make it blink, instead of delay, <mark>millis()</mark> was used. Adding delay is possible but however, the program is unable to detect another button press if the LEDs are blinking during the delays. </p1>
+                        <p1>To have the LEDs blink using <mark>millis()</mark>, the reading at a certain point in time and finds the remainder when divided by 2, which results in either a '0' (OFF) or '1' (ON). However, just using <mark>millis()</mark> will cause the LED to blink every millisecond, which would be too fast. As such, the reading is divided by 100, which will cause it to blink every 100ms as it will round the value to the nearest 100ms. The blinking intervals can be changed by changing this value. </p1>
                     </div>
                 </div>
                 <img src="./images/arduino-images/decode.svg">

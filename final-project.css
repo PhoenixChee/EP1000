@@ -6,47 +6,45 @@
     gap: 16px;
     font-weight: bold;
 }
-.contents-container p2 {
-    color: rgba(100, 100, 100, 1);
-}
-.contents-container p3 {
-    color: rgba(100, 100, 100, 1);
-    font-weight: normal;
-    transition: all 500ms ease;
-}
 .contents-container .content {
     display: flex;
+    justify-content: center;
     gap: 16px;
+    width: 100%;
 }
-.contents-container .content a {
+.contents-container a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
     padding: 16px;
     color:rgba(51, 51, 51, 1);
-    border-radius: 20px;
     border: solid 2px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
     transition: all 500ms ease;
 }
-.contents-container .content ion-icon {
+.contents-container ion-icon {
     font-size: 50px;
-    padding-right: 10px;
     color: royalblue;
     transition: all 500ms ease;
 }
-.contents-container .content a:hover {
-    color:rgba(255, 255 ,255, 1);
+.contents-container p3 {
+    font-weight: normal;
+    color: rgba(100, 100, 100, 1);
+    transition: all 500ms ease;
+}
+.contents-container a:hover {
+    color:rgb(255, 255, 255);
     background-color: royalblue;
-    border-radius: 20px;
     border: solid 2px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
     transform: scale(1.035);
+    transition: all 500ms ease;
 }
-.contents-container .content a:hover ion-icon {
-    color: rgba(255, 255, 255, 1);
-}
-.contents-container .content a:hover p3 {
+.contents-container a:hover > ion-icon, .contents-container a:hover > p3 {
     color: rgba(255, 255, 255, 1);
 }
 
@@ -170,6 +168,7 @@
     text-align: justify;
 }
 .features-container .card img {
+    width: 100%;
     max-width: 400px;
     background-color: rgb(255, 255, 255);
     border: solid 2px rgba(0, 0, 0, 0.06);
@@ -206,10 +205,10 @@
 }
 .resources-container .resources {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 .resources-container .cards {
     display: flex;
@@ -228,15 +227,22 @@
     padding: 24px;
     width: 100%;
     color: rgba(255, 255, 255, 1);
-    background: royalblue;
     border-radius: 30px 30px 0 0;
 }
+#card1 { background: rgb(225, 65, 65); }
+#card2 { background: rgb(225, 142, 65); }
+#card3 { background: rgb(225, 201, 65); }
+#card4 { background: rgb(65, 225, 78); }
+#card5 { background: royalblue; }
+#card6 { background: rgb(140, 65, 225); }
+
 .resources-container .card ion-icon {
     font-size: 30px;
 }
 .resources-container .text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     gap: 16px;
