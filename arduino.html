@@ -70,7 +70,7 @@
 <body>
     <section class="arduino-container">
         <div class="container">
-            <h2>Arduino Programming</h2>
+            <h2>Digital Input & Output</h2>
             <div class="panel">
                 <div class="body">
                     <div class="icon">
@@ -228,7 +228,7 @@
                         <p1>During all this, the function 'decode' has been continously run and change in LEDState will cause a switch case. </p1>
                     </div>
                 </div>
-                <img src="./images/arduino-images/update-button-a<mark>lastButtonState</mark>.svg">
+                <img src="./images/arduino-images/update-button-and-led-state.svg">
             </div>
             <div class="panel">
                 <div class="body">
@@ -244,6 +244,85 @@
                     </div>
                 </div>
                 <img src="./images/arduino-images/decode.svg">
+            </div>
+        </div>
+    </section>
+    <section class="arduino-container">
+        <div class="container">
+            <h2>Sensors & Libraries</h2>
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="bookmarks"></ion-icon>
+                        <p2>Requirements</p2>
+                    </div>
+                    <div class="text">
+                        <h1>What to do</h1>
+                        <p1>The fablab provides some useful components such as the ultrasonic sensor (SR04), humidity & temperature sensor (DHT11) and PIR motion sensor. The components have libraries ready to use so that coding will be easier. Here are the programming assignments: </p1>
+                        <div class="points">
+                            <div class="point">
+                                <h3>Sensor</h3>
+                                <div class="grid">
+                                    <p3>Ultrasonic Sensor</p3>
+                                    <p3>Humidity & Temperature Sensor</p3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./images/arduino-images/ultrasonic-sensor.png">
+            </div>
+            <!-- SENSORS -->
+            <div class="content">
+                <div class="icon">
+                    <ion-icon name="browsers-sharp"></ion-icon>
+                    <p2>TinkerCAD</p2>
+                </div>
+                <iframe id="TinkerCAD" src="https://www.tinkercad.com/embed/fV4gGxV8QLG?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                <div class="text">
+                    <p1>Note that this tinkerCAD program does not actually work. This is to show how the circuit is connected to the sensor. </p1>
+                </div>
+                <div class="panel">
+                    <div class="body">
+                        <div class="icon">
+                            <ion-icon name="document-text-sharp"></ion-icon>
+                            <p2>Code</p2>
+                        </div>
+                        <div class="text">
+                            <h1>Ultrasonic</h1>
+                            <p1>The library I use <mark>NewPing.h</mark>. <mark>TRIGGER_PIN</mark>, <mark>ECHO_PIN</mark> & <mark>MAX_DISTANCE</mark> are defined as the input pins and the maximum sensing range of this ultrasonic. I need to set the pins connected and use <mark>sonar.ping_cm()</mark> to output the distance of an obstructing object. </p1>
+                        </div>
+                    </div>
+                    <img src="./images/arduino-images/SR04.svg">
+                </div>
+                <!-- DHT11 Types -->
+                <div class="icon">
+                    <ion-icon name="water"></ion-icon>
+                    <p2>Humidity & Temperature Sensor</p2>
+                    <ion-icon name="thermometer"></ion-icon>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/arduino-images/humidity-temperature-sensor.png">
+                        <p3>DHT11 & DHT22</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>This is an illustration of the types of sensors DHT have. Currently, I am programming on the <mark>DHT11</mark>. The circuit connection is pretty simple as there are only 3 wires need to be made: VCC, GND & DATA. NC does not need to be connect because it means "Not Connected". </p1>
+                </div>
+                <div class="panel">
+                    <div class="body">
+                        <div class="icon">
+                            <ion-icon name="document-text-sharp"></ion-icon>
+                            <p2>Code</p2>
+                        </div>
+                        <div class="text">
+                            <h1>RH & Temp</h1>
+                            <p1>The library I use <mark>DHT.h</mark> which works similarly like the above program. <mark>DHTPIN</mark> and <mark>DHTTYPE</mark> are defined as the input pin and the type of sensor I am using. The program is pretty straight forward as I just need to use the library's function to output the data from the sensor. </p1>
+                        </div>
+                    </div>
+                    <img src="./images/arduino-images/DHT11.svg">
+                </div>
             </div>
         </div>
     </section>
