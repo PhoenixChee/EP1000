@@ -227,14 +227,9 @@
     padding: 24px;
     width: 100%;
     color: rgba(255, 255, 255, 1);
+    background: royalblue;
     border-radius: 30px 30px 0 0;
 }
-#card1 { background: rgb(225, 65, 65); }
-#card2 { background: rgb(225, 142, 65); }
-#card3 { background: rgb(225, 201, 65); }
-#card4 { background: rgb(65, 225, 78); }
-#card5 { background: royalblue; }
-#card6 { background: rgb(140, 65, 225); }
 
 .resources-container .card ion-icon {
     font-size: 30px;
