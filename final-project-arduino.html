@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pee Hee - Programming Final Project</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="final.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+</head>
+
+<header>
+    <!-- NAVIGATION COMPONENT -->
+    <section class="header-container">
+        <div class="container">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">
+                            <ion-icon name="home"></ion-icon>
+                            <p2>Home</p2>
+                        </a></li>
+                    <li><a href="about-me.html">
+                            <ion-icon name="person"></ion-icon>
+                            <p2>About Me</p2>
+                        </a></li>
+                    <li><a href="timeline.html">
+                            <ion-icon name="calendar"></ion-icon>
+                            <p2>Timeline</p2>
+                        </a></li>
+                    <li><a href="#">
+                            <ion-icon name="layers"></ion-icon>
+                            <p2>Projects</p2>
+                            <ion-icon name="caret-down-outline"></ion-icon>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="website-development.html"><p3>Website Development<p3></a></li>
+                            <li><a href="knight.html"><p3>Knight Chesspiece</p3></a></li>
+                            <li><a href="music-box.html"><p3>Music Box</p3></a></li>
+                            <li><a href="computer-graphics.html"><p3>Computer Graphics</p3></a></li>
+                            <li><a href="arduino.html"><p3>Arduino</p3></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="final-project.html" class="active">
+                        <ion-icon name="trophy"></ion-icon>
+                        <p2>Final Project</p2>
+                        </a></li>
+                </ul>
+                <div class="menu">
+                    <ion-icon id="icon-menu" name="grid-outline"></ion-icon>
+                    <ion-icon id="icon-close" name="close-circle-outline"></ion-icon>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- HERO COMPONENT -->
+    <section class="hero-container">
+        <img src="./images/images-background/background-hero.svg" alt="hero-bg">
+        <div class="title">
+            <h3>Programming</h3>
+            <h1>RGB Audio Visualiser</h1>
+        </div>
+    </section>
+</header>
+
+<!-- SECTION -->
+<body>
+    <!-- NAVIGATION COMPONENT -->
+    <section class="contents-container">
+        <div class="container">
+            <div class="content">
+                <a href="final-project.html">
+                    <ion-icon name="bulb"></ion-icon>
+                    <p1>Introduction</p1>
+                    <p3>Project Description</p3>
+                </a>
+                <a href="final-project-design.html">
+                    <ion-icon name="construct"></ion-icon>
+                    <p1>Design & Assembly</p1>
+                    <p3>How I made it</p3>
+                </a>
+            </div>
+            <div class="content">
+                <a href="final-project-arduino.html" class="active">
+                    <ion-icon name="hardware-chip"></ion-icon>
+                    <p1>Programming & Toubleshooting</p1>
+                    <p3>How I code it</p3>
+                </a>
+                <a href="final-project-submission.html">
+                    <ion-icon name="star"></ion-icon>
+                    <p1>Final Test</p1>
+                    <p3>Final Submission</p3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- CONTENT COMPONENT -->
+    <section class="contents-container">
+        <div class="container">
+            <h3>Content</h3>
+            <div class="content">
+                <a href="#content-1">
+                    <ion-icon name="search-circle"></ion-icon>
+                    <p1>Research</p1>
+                </a>
+                <a href="#content-2">
+                    <ion-icon name="calculator"></ion-icon>
+                    <p1>Arduino FFT</p1>
+                </a>
+            </div>
+            <div class="content">
+                <a href="#content-3">
+                    <ion-icon name="color-filter"></ion-icon>
+                    <p1>Adafruit NeoPixel</p1>
+                </a>
+                <a href="#content-4">
+                    <ion-icon name="settings"></ion-icon>
+                    <p1>Troubleshooting</p1>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- RESEARCH COMPONENT -->
+    <section class="panels-container">
+        <div class="container">
+            <div class="panel" id="content-1">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="search-circle"></ion-icon>
+                        <p2>Research</p2>
+                    </div>
+                    <div class="text">
+                        <h1>Understanding Signals</h1>
+                        <p1>For this particular project is programming intensive since we are dealing with real-world signals and converting them into different frequencies using a microphone. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/research/sound-waves.png">
+            </div>
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="search-circle"></ion-icon>
+                        <p2>Research</p2>
+                    </div>
+                    <div class="text">
+                        <h1>FFTs & Windowing</h1>
+                        <p1>Before digging in, we need to understand what are FFTs and Windowing. FFTs stands for Fast Fourier Transforms (FFTs), and it can be powerful in understanding everyday signals and troubleshooting errors in signals. Although the Fourier transform is a complicated mathematical function, it isn’t a complicated concept to understand and relate to the measured signals. Essentially, it takes a signal and breaks it down into sine waves of different amplitudes and frequencies. </p1>
+                        <p1>In real-world signals, all of them are sum of sines. If we can construct a signal using sines, we can also deconstruct signals into sines. Once a signal is deconstructed, we can then see and analyze the different frequencies that are present in the original signal. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/research/sum-of-sines-waves.svg">
+            </div>
+        </div>
+    </section>
+    <section class="cards-container">
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <img src="./images/final-project/research/fast-fourier-transform.png">
+                    <div class="text">
+                        <h2>FFTs</h2>
+                        <p2>The Fourier transform deconstructs a time-domain representation of a signal into the frequency domain representation - A signal is sampled over a period of time and divided into its frequency components. These components are single sinusoidal oscillations at distinct frequencies each with their own amplitude and phase. </p2>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/final-project/research/windowing.png">
+                    <div class="text">
+                        <h2>Windowing</h2>
+                        <p2>Although performing an FFT on a signal can provide great insight, it is important to know the limitations of the FFT and how to improve the signal clarity using windowing. Spectral leakage is caused by discontinuities in the original, non-integer number of periods in a signal and can be improved using windowing. Windowing reduces the amplitude of the discontinuities at the boundaries of each finite sequence acquired by the digitizer. </p2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ARDUINO FFT COMPONENT -->
+    <section class="panels-container" id="content-2">
+        <div class="container">
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="file-tray"></ion-icon>
+                        <p2>Library</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Arduino FFT</h2>
+                        <p1>Fortunately, there is an Arduino Library that helps to do FFT calculations for the signals received. The library I used is called <mark>ArduinoFFT.h</mark>. </p1>
+                        <a href="https://github.com/kosme/arduinoFFT"><p1>Learn More</p1></a>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/arduino-library.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Setup</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Defining Pins</h2>
+                        <p1>Here are the data pins I use and how I setup my Arduino. I use buttons, microphone and LED matrix. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/setup.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Loop</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Functions</h2>
+                        <p1>These are the functions I used in my program and I will try my best in-detail to explain. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/loop.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Variables</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Sampling Variables</h2>
+                        <p1>These are the following arrays & variables I use for the FFT functions. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/sampling-variables.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Sampling</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Sampling at Powers of 2</h2>
+                        <p1>First, I sampled 64 signals from the microphone. The samples must be in powers of 2 is because FFT relies on breaking the required calculations into smaller ones that can be done very rapidly. The smallest unit is a 2 point calculation. That is why most FFT implementations require that the number of points being analyzed be equal to a power of 2 (256, 512, 1024, etc.). </p1>
+                        <p1>However, more samples will mean more data to be stored by the Arduino to compute and an Arduino Nano has a dynamic memory of only 2kb. Storing 64 samples has used up to 60% of the memory while using 128 samples will exceed the memory limit, causing the arduino to fail. </p1>
+                        <p1>There are also limitations having lesser samples. The FFT is unable to calculate frequecies higher than 8khz. It is evident in my testing where the microphone could not pick up frequencies below 128hz or above 16khz. Hence in this project, I am using these following 8 bands: 64hz, 128hz, 256hz, 512hz, 1khz, 2khz, 4khz, 8kz. </p1>
+                    </div>
+                </div>
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Function</p2>
+                    </div>
+                    <div class="text">
+                        <h2>FFT Calculation</h2>
+                        <p1>When sampling signals from the microphone, we also need to know the sampling frequency. Sampling frequency determines the bandwidth of the FFT, so with a higher sampling frequency can analyze higher frequencies. I use <mark>micros()</mark> which works similarly to <mark>millis()</mark> to find the time-lapsed when sampling 64 signals. </p1>
+                        <p1>Signal samples are stored in the <mark>vReal</mark> array. <marK>vImag</marK> will be zeroed in case of looping to avoid wrong calculations and overflows. I perform FFT given by the library to calculate the raw Magnitude values and frequencies of each signal and store them into their respective arrays. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/fft-calculation.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Function - Part 1</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Frequency Bands</h2>
+                        <p1>I am not exactly know what is the actual highest or lowest frequecy it can detect. To be accurate in finding the frequency range of the microphone, I use the difference between the 2nd and last raw frequency sample and divide them into 8 bands. I did not use the 1st raw frequency sample because the value is always 0. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/frequency-bands.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Function - Part 2</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Sorting Magnitude</h2>
+                        <p1>However, the values in the arrays are not sorted and are of different frequencies and magnitude. </p1>
+                        <p1>Here I sort the different signals to their respective bands and summed their magnitude altogether using <mark>switch case</mark> statements before finding their average. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/magnitude-sorting.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Function - Part 3</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Average Magnitude</h2>
+                        <p1>I use the sum of magnitude divided by the number of magnitude counts that fall into each band. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/magnitude-average.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Calibration - Method 1</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Auto Max-Min</h2>
+                        <p1>I use two <mark>if-statements</mark> such that if the final magnitude falls above maxMag or below minMag, it updates to maxMag and minMag to its value respectively. </p1>
+                        <p1>However, there were problems using this method. The microphone picks up strange outliers frequencies in each band, causing the updated maxMag and minMag values to have a big difference. The resulting normalized value will be inaccurate, causing LEDs to light up at the wrong positions. </p1>
+                    </div>
+                    <a href="#"><p1>Watch Video</p1></a>
+                </div>
+                <img src="./images/final-project/arduino/calibration-method-1.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Calibration - Method 2</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Manual Max-Min</h2>
+                        <p1>A safer way to calibrate the values without noise errors is to manually record down the values when the room is silent for minMag values and play a piece of loud music for maxMag values. When there is no sound, the LEDs light up on row 0. </p1>
+                        <p1>However, some normalized magnitude values fluctuate at low frequencies causing some LEDs to light between rows 0 and 2. This problem might be from the microphone which I have no control over but it is good enough to test the frequencies. </p1>
+                    </div>
+                    <a href="#"><p1>Watch Video</p1></a>
+                </div>
+                <img src="./images/final-project/arduino/calibration-method-2.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Calibration - Method 3</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Average Min</h2>
+                        <p1>This works similar to method 2, I record down the values of at least 100 samples when the room is silent for each band of minMag values. Using excel sheet, I find the average minMag and use that as the threshold. </p1>
+                        <p1>Using this method eliminates noise error and it is more accurate compared to the preuious two methods. </p1>
+                    </div>
+                    <a href="#"><p1>Watch Video</p1></a>
+                </div>
+                <img src="./images/final-project/arduino/calibration-method-3.svg">
+            </div>
+        </div>
+    </section>
+    <!-- NEOPIXEL COMPONENT -->
+    <section class="panels-container" id="content-3">
+        <div class="container">
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="file-tray"></ion-icon>
+                        <p2>Library</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Adafruit NeoPixel</h2>
+                        <p1>I use will Method 3 to find the normalised magnitude value find the highest LED per band. </p1>
+                        <p1>To light up and individually control the LEDs in the matrix, I use the <mark>Adafruit_NeoPixel.h</mark>. </p1>
+                        <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use"><p1>Learn More</p1></a>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/adafruit.png">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Array</p2>
+                    </div>
+                    <div class="text">
+                        <h2>2D Array Index</h2>
+                        <p1>To select the LEDs in the matrix, I use 2D array (8x8) to define the index of the LEDs in the matrix. Another two 2D arrays is used for assigning hue and brightness to the LEDs. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/arrays.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Function</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Assign Colour</h2>
+                        <p1>To get the cool RGB lighting, I use <mark>pixels.ColorHSV()</mark> because it is easier to cycle through the color wheel in the program. The color wheel has a 16-bit range and loops back to '0' after reaching the limit, hence producing the rainbow cycle effect. </p1>
+                        <p1>The <mark>pixels.ColorHSV()</mark> has 3 parameters: Hue (0~65526), Saturation (0~255) and Brightness (0~255). </p1>
+                        <p1>I use the normalized value to find which LED in each column (band) to light up. To ‘ON’ the LEDs in <mark>pixels.ColorHSV()</mark>, I set the brightness value to '8'. I assign the hue and brightness values in their 2D array. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/assign-colour.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Function</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Setup & Display </h2>
+                        <p1>Once all the values are assigned, it is time to display each of the LED values. I use <mark>pixels.setPixelColor()</mark> to set the values to the LEDs. The <mark>pixels.setPixelColor()</mark> has 2 parameters: LED Index (0~63), Color (HSV). </p1>
+                        <p1>The LEDs have their specific values set, to display the LEDs I use <mark>pixels.show()</mark>. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/display-led.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Function</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Reset Brightness</h2>
+                        <p1>Because in <mark>pixels.ColorHSV()</mark>, I cannot use <mark>pixels.clear()</mark> to turn off the LEDs. It will make "ALL" the LEDs repeatedly turn on and off which does not look good. Hence I use brightness '0' to reset the individual LEDs in the array. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/reset-led.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Function</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Lighting Types</h2>
+                        <p1>I use pullup buttons to change the lighting types of the audio visualiser. The make sure the button has a state change detection which I have learned from one of the Arduino lessons. This to ensure that the button can only trigger once everytime it is pressed down. </p1>
+                        <p1>I use the <mark>middle button</mark> to change the lighting type of the audio visualiser. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/lighting-types.svg">
+            </div>
+            <div class="split">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="document-text"></ion-icon>
+                        <p2>Function</p2>
+                    </div>
+                    <div class="text">
+                        <h2>Manual Change Colour</h2>
+                        <p1>There are two lighting types for the audio visualiser: RGB and Single Colour. </p1>
+                        <p1>In RGB lighting type, it continuously cycles through the hue values of the colour wheel. </p1>
+                        <p1>In Single Colour lighting type, the user is able to change the hue value of the LED. Using the <mark>left button</mark> and <mark>right button</mark> to decrease and increase the hue value respectively. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/choose-type.svg">
+            </div>
+        </div>
+    </section>
+    <!-- TROUBLESHOOTING COMPONENT-->
+    <section class="panels-container" id="content-4">
+        <div class="container">
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="flag"></ion-icon>
+                        <p2>Challenges</p2>
+                    </div>
+                    <div class="text">
+                        <h1>What happened</h1>
+                        <p1>Understanding the concept of deconstructing sound signals may be difficult at first. I have to read up a lot of papers to sort of get the idea of FFTs & Windowing. Not only that, the biggest challenge I had was to understand how to use <mark>ArduinoFFT</mark>. </p1>
+                        <p1>There were not a lot of helpful sources to guide me to understand the FFT functions in Arduino. The source I reference to make this audio visualisation work is this <a href="https://github.com/kosme/arduinoFFT/blob/master/Examples/FFT_05/FFT_05.ino"><p1>example</p1></a> from GitHub.</p1>
+                        <p1>Despite the lack of useful comments in the example, I managed to get an idea how the FFT functions work.</p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/github.png">
+            </div>
+            <div class="panel">
+                <div class="body">
+                    <div class="icon">
+                        <ion-icon name="flag"></ion-icon>
+                        <p2>Challenges</p2>
+                    </div>
+                    <div class="text">
+                        <h1>What happened</h1>
+                        <p1>The second challenge was calibrating the magnitude values (method 1 & 2). The values are not very consistent received from microphone, causing the LEDs to flunctuate between columns. Though method 3 has improved accuracy, the slow data processing of the Arduino Nano limits the potential of this microphone. </p1>
+                    </div>
+                </div>
+                <img src="./images/final-project/arduino/microphone.png">
+            </div>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <section class="footer-container">
+        <img src="./images/images-background/footer.svg">
+    </section>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="scripts.js"></script>
+
+</html>

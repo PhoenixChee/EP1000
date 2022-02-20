@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pee Hee - Final Project</title>
     <link href="styles.css" rel="stylesheet">
-    <link href="final-project.css" rel="stylesheet">
+    <link href="final.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
 </head>
 
@@ -66,38 +66,63 @@
 </header>
 
 <body>
-    <!-- CONTENTS COMPONENT -->
+    <!-- NAVIGATION COMPONENT -->
     <section class="contents-container">
         <div class="container">
-            <h2>Contents</h2>
+            <div class="content">
+                <a href="final-project.html" class="active">
+                    <ion-icon name="bulb"></ion-icon>
+                    <p1>Introduction</p1>
+                    <p3>Project Description</p3>
+                </a>
+                <a href="final-project-design.html">
+                    <ion-icon name="construct"></ion-icon>
+                    <p1>Design & Assembly</p1>
+                    <p3>How I made it</p3>
+                </a>
+            </div>
+            <div class="content">
+                <a href="final-project-arduino.html">
+                    <ion-icon name="hardware-chip"></ion-icon>
+                    <p1>Programming & Toubleshooting</p1>
+                    <p3>How I code it</p3>
+                </a>
+                <a href="final-project-submission.html">
+                    <ion-icon name="star"></ion-icon>
+                    <p1>Final Test</p1>
+                    <p3>Final Submission</p3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- CONTENT COMPONENT -->
+    <section class="contents-container">
+        <div class="container">
+            <h3>Content</h3>
             <div class="content">
                 <a href="#content-1">
-                    <ion-icon name="settings"></ion-icon>
+                    <ion-icon name="bookmarks"></ion-icon>
                     <p1>Function</p1>
-                    <p3>What does it do?</p3>
                 </a>
                 <a href="#content-2">
-                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="browsers"></ion-icon>
                     <p1>Features</p1>
-                    <p3>What has it have?</p3>
                 </a>
             </div>
             <div class="content">
                 <a href="#content-3">
-                    <ion-icon name="construct"></ion-icon>
-                    <p1>Resources Required</p1>
-                    <p3>How to build it?</p3>
+                    <ion-icon name="layers"></ion-icon>
+                    <p1>Resources</p1>
                 </a>
                 <a href="#content-4">
-                    <ion-icon name="cash"></ion-icon>
-                    <p1>Bill of Materials</p1>
-                    <p3>How much it cost?</p3>
+                    <ion-icon name="receipt"></ion-icon>
+                    <p1>List of Materials</p1>
                 </a>
             </div>
         </div>
     </section>
     <!-- FUNCTION COMPONENT -->
-    <section class="function-container" id="content-1">
+    <section class="panels-container" id="content-1">
         <div class="container">
             <div class="panel">
                 <div class="body">
@@ -117,7 +142,7 @@
         </div>
     </section>
     <!-- FEATURES COMPONENT -->
-    <section class="features-container" id="content-2">
+    <section class="cards-container" id="content-2">
         <div class="container">
             <div class="icon">
                 <ion-icon name="browsers"></ion-icon>
@@ -125,21 +150,17 @@
             </div>
             <div class="cards">
                 <div class="card">
-                    <img src="./images/final-project/rgb-lighting.png" alt="2">
+                    <img src="./images/final-project/introduction/rgb-lighting.png">
                     <div class="text">
-                        <h2>2 Operating Modes</h2>
-                        <p2>The 2 operating modes are Audio Visualiser and Glow Lamp. </p2>
-                        <p2>How this works is that the Audio Visualiser uses a microphone to receive sound input. Hence LEDs will change its brightness or colours accordingly. </p2>
-                        <p2>The other mode simply works by removing the input from the microphone and operates as normal LEDs. </p2>
+                        <h2>Frequency Bands</h2>
+                        <p2>The Audio Visualiser uses a microphone to receive sound input and lights up LEDs depending on the frequency. There will be a total 8 frequency bands, each correspond to a specific frequency threshold. </p2>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/final-project/glow-lamp.png" alt="3">
+                    <img src="./images/final-project/introduction/glow-lamp.png">
                     <div class="text">
                         <h2>Lightning Features</h2>
-                        <p2>There will be various lighting profiles I plan to showcase in this project. As of now there will be 2 lighting profiles. </p2>
-                        <p2>First, there will be "RGB" Profile that cycles the colours continuously. </p2>
-                        <p2>Second is the "Single-colour" Profile that will have LEDs operate at colours set by the user. </p2>
+                        <p2>There will be various lighting profiles I plan to showcase in this project. As of now there will be 2 lighting profiles. First, there will be "RGB" Profile that cycles through the colours continuously. Second is the "Single-colour" Profile that will have LEDs operate at colours set by the user. </p2>
                     </div>
                 </div>
             </div>
@@ -186,7 +207,7 @@
             <div class="resources">
                 <div class="cards">
                     <div class="card" id="card4">
-                        <ion-icon name="game-controller"></ion-icon>
+                        <ion-icon name="hardware-chip"></ion-icon>
                         <h3>Microcontroller</h3>
                     </div>
                     <div class="text">
@@ -200,7 +221,7 @@
                     </div>
                     <div class="text">
                         <p2> MAX4466 Microphone Amplifier</p2>
-                        <p2>Outemu Red Linear Mechanical Switches</p2>
+                        <p2>Outemu Mechanical Switches</p2>
                     </div>
                 </div>
                 <div class="cards">
@@ -215,14 +236,15 @@
             </div>
         </div>
     </section>
-    <!-- BILLS COMPONENT -->
-    <section class="bills-container" id="content-4">
+    <!-- LIST OF MATERIALS COMPONENT -->
+    <section class="list-container" id="content-4">
         <div class="container">
             <div class="icon">
-                <ion-icon name="wallet"></ion-icon>
-                <p2>Material Bills</p2>
+                <ion-icon name="receipt"></ion-icon>
+                <p2>List Of Materials</p2>
             </div>
             <div class="table">
+                <!-- BILL -->
                 <div class="row" id="top-row">
                     <div class="number"><p2>S/N</p2></div>
                     <div class="quantity"><p2>Quantity</p2></div>
@@ -239,7 +261,7 @@
                     <div class="number"><p2>2</p2></div>
                     <div class="quantity"><p2>1</p2></div>
                     <div class="text"><p2>MAX4466 Microphone Amplifier</p2></div>
-                    <div class="cost"><p2>$8</p2></div>
+                    <div class="cost"><p2>$10</p2></div>
                 </div>
                 <div class="row">
                     <div class="number"><p2>3</p2></div>
@@ -250,12 +272,71 @@
                 <div class="row">
                     <div class="number"><p2>4</p2></div>
                     <div class="quantity"><p2>3</p2></div>
-                    <div class="text"><p2>Outemu Red Linear Mechanical Switches</p2></div>
+                    <div class="text"><p2>Outemu Mechanical Switches</p2></div>
                     <div class="cost"><p2>$2</p2></div>
+                </div>
+                <!-- LASER CUT PARTS -->
+                <div class="row" id="top-row">
+                    <div class="number"><p2>S/N</p2></div>
+                    <div class="quantity"><p2>Quantity</p2></div>
+                    <div class="text"><p2>Laser Cut Parts</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>5</p2></div>
+                    <div class="quantity"><p2>1</p2></div>
+                    <div class="text"><p2>Cover Plate</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>6</p2></div>
+                    <div class="quantity"><p2>2</p2></div>
+                    <div class="text"><p2>Support Layer Plates</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>7</p2></div>
+                    <div class="quantity"><p2>64</p2></div>
+                    <div class="text"><p2>Acrylic Sticks</p2></div>
+                </div>
+                <!-- 3D PRINTED PARTS -->
+                <div class="row" id="top-row">
+                    <div class="number"><p2>S/N</p2></div>
+                    <div class="quantity"><p2>Quantity</p2></div>
+                    <div class="text"><p2>3D Printed Parts</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>8</p2></div>
+                    <div class="quantity"><p2>1</p2></div>
+                    <div class="text"><p2>Base</p2></div>
+                </div>
+                <!-- OTHER PARTS -->
+                <div class="row" id="top-row">
+                    <div class="number"><p2>S/N</p2></div>
+                    <div class="quantity"><p2>Quantity</p2></div>
+                    <div class="text"><p2>Other Parts</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>9</p2></div>
+                    <div class="quantity"><p2>4</p2></div>
+                    <div class="text"><p2>M3x30mm Counterbore Screws</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>10</p2></div>
+                    <div class="quantity"><p2>4</p2></div>
+                    <div class="text"><p2>M3x10mm Counterbore Screws</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>11</p2></div>
+                    <div class="quantity"><p2>4</p2></div>
+                    <div class="text"><p2>M3 Spacer (Female-Female)</p2></div>
+                </div>
+                <div class="row">
+                    <div class="number"><p2>12</p2></div>
+                    <div class="quantity"><p2>4</p2></div>
+                    <div class="text"><p2>M3 Spacer (Male-Female)</p2></div>
                 </div>
             </div>
         </div>
     </section>
+</body>
 
 <footer>
     <section class="footer-container">
