@@ -70,7 +70,6 @@
     <!-- NAVIGATION COMPONENT -->
     <section class="contents-container">
         <div class="container">
-            <h3>Final Project Navigation</h3>
             <div class="content">
                 <a href="final-project.html">
                     <ion-icon name="bulb"></ion-icon>
@@ -138,21 +137,35 @@
                         <p1>Base Plate, Cover Plate, Support Layer Plates, Acrylic Sticks. </p1>
                         <p1>I took reference from a design made by a youtuber. I added my own changes such as to mount the mechanical buttons & microphone. </p1>
                         <a href="https://www.youtube.com/watch?v=PjKqbAzZj5k"><p1>RGB Laser Stem Video</p1></a>
-                        <p1>The difference between my project and his project is that I use the microphone to make reactive music LEDs. Whereas his project has no other input components other than having very nice lighting profiles. </p1>
+                        <p1>The difference between my project and his project is that I use the microphone to make music reactive LEDs. Whereas his project, which has no other input components, have very beautiful lighting features. </p1>
                     </div>
                 </div>
-                <img src="">
+                <img src="./images/final-project/design/Finished-transparent.png">
             </div>
             <div class="content">
+                <div class="icon">
+                    <ion-icon name="flag"></ion-icon>
+                    <p2>Design</p2>
+                </div>
+                <img id="parameter" src="./images/final-project/design/arduino-nano-data-pins.png"> 
+                <div class="text">
+                    <h1>Circuit Planning</h1>
+                    <p1>I designed a 3D printed base to mount my mount my components so that if there were any hardware errors, I can easily dismantle and fix. I will need to plan and consider how I will want to connect my wires for the componenets inside the 3D printed base. </p1>
+                    <p1>I am also a very big fan of low profile and compact designs. I had resolder the Arduino Nano by replacing the straight header pins to L-header pins because managing jumper wires will be easier sideways. </p1> 
+                    <p1>Reason behind using jumper wires because I generally do not like to make connections too permananent despite experienced with lose connections. However, in a small space for wires, they are not easily disconnect. </p1> 
+                </div>
                 <div class="icon">
                     <ion-icon name="settings"></ion-icon>
                     <p2>Parameters</p2>
                 </div>
                 <img id="parameter" src="./images/final-project/design/parameters.png">
                 <div class="text">
-                    <p1>This is the parameters settings I use for my audio visualiser. I took alot of measurements around components and set them as parameters as shown. A rule of thumb to set the tolerance around 0.2mm~0.4mm </p1>
+                    <p1>This is the parameters settings I use for my audio visualiser. I took a lot of measurements around components and set them as parameters as shown. I set the tolerance around 0.2mm to 0.4mm to fit my components in. </p1>
                 </div>
                 <iframe src="https://ichat2368.autodesk360.com/shares/public/SH35dfcQT936092f0e43329b66edf7043ce3?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+                <div class="text">
+                    <p1>This is my completely parametric RGB Audio Visualiser design model. </p1>
+                </div>
             </div>
             <div class="panel" id="content-2">
                 <div class="body">
@@ -162,7 +175,7 @@
                     </div>
                     <div class="text">
                         <h1>Laser Cutting</h1>
-                        <p1>The audio visualiser plates Pieces are exported as DWG files and opened in CorelDraw to laser cut. I offset each plate to 1.4mm so that little amount of material is wasted </p1>
+                        <p1>The audio visualiser plates are exported as DWG files and opened in CorelDraw to laser cut. I offset each plate to around 1mm so that little amount of material is wasted cutting around them.  </p1>
                         <div class="points">
                             <div class="point">
                                 <h3>Laser Cutter</h3>
@@ -175,6 +188,7 @@
                                 <div class="grid">
                                     <p3>Speed 7%</p3>
                                     <p3>Power 40%</p3>
+                                    <p3>PPI 600</p3>
                                 </div>
                             </div>
                         </div>
@@ -189,11 +203,11 @@
                 </div>
                 <div class="cards">
                     <div class="card">
-                        <img src="./images/music-box-images/music-box.svg">
+                        <img src="./images/final-project/design/audio-visualiser-plates.svg">
                         <p3>Audio Visualiser Plates</p3>
                     </div>
                     <div class="card">
-                        <img src="./images/music-box-images/japanese-wave.png">
+                        <img src="./images/final-project/design/audio-visualiser-sticks.svg">
                         <p3>Acrylic Sticks</p3>
                     </div>
                 </div>
@@ -218,21 +232,35 @@
                                 </div>
                             </div>
                             <div class="point">
-                                <h3>Material</h3>
+                                <h3>Material </h3>
                                 <div class="grid">
                                     <p3>Black PLA</p3>
                                 </div>
                             </div>
                             <div class="point">
-                                <h3>Settings</h3>
+                                <h3>Quality </h3>
                                 <div class="grid">
-                                    <p3>Same Standard as Previous 3D Printed Items</p3>
+                                    <p3>Layer Height 0.2mm</p3>
+                                    <p3>Top/Bottom Thickness 0.8mm</p3>
                                 </div>
                             </div>
                             <div class="point">
-                                <h3>Printing Time</h3>
+                                <h3>Infill </h3>
                                 <div class="grid">
-                                    <p3>3 Hours</p3>
+                                    <p3>10% Grid Pattern</p3>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <h3>Support </h3>
+                                <div class="grid">
+                                    <p3>Support from Buildplate</p3>
+                                    <p3>Zig Zag Pattern</p3>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <h3>Build Plate Adhesion</h3>
+                                <div class="grid">
+                                    <p3>Skirt</p3>
                                 </div>
                             </div>
                         </div>
@@ -247,9 +275,16 @@
                 </div>
                 <div class="cards">
                     <div class="card">
-                        <img src="./images/music-box-images/music-box.svg">
-                        <p3>Sliced Model</p3>
+                        <img src="./images/final-project/design/cura-top.png">
+                        <p3>Sliced Base Top</p3>
                     </div>
+                    <div class="card">
+                        <img src="./images/final-project/design/cura-bottom.png">
+                        <p3>Sliced Base Bottom </p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>I added supports from the build plate for the counterbore holes and slot for the USB. This is to eliminate bridging and nicer print quality. </p1>
                 </div>
             </div>
             <div class="panel">
@@ -259,14 +294,13 @@
                         <p2>Challenges</p2>
                     </div>
                     <div class="text">
-                        <h1>What happened</h1>
-                        <p1>The laser cutting went great and there were no problems at all. The acrylic sticks fit perfectly into the holes of the audio visualiser plates. </p1>
-                        <p1>As for 3D printing, I took 3 attempts. The 1st attempt is that the dimensions were all completely wrong as I used certain dimensions in the wrong areas of during modelling. Hence the components are unable to fit inside. </p1>
-                        <p1>The 2nd attempt is that I added too little tolerance of 0.1mm and I had to sand some areas in order to friction fit the components in. In the end, most of the components could not fit into the base. Luckily, this was my test print of infill 5% and the design is parametric. </p1>
-                        <p1>The 3rd and final attempt is to adjust the values in the parameters to the correct values. The final print took around 3 hours which is not ideal for most cases. Once it was done, all the componenets were able to fit into the slots I made. </p1> 
+                        <h1>Base Redesigns</h1>
+                        <p1>The laser cutting went well and there were no problems at all. The acrylic sticks fit perfectly into the holes of the audio visualiser plates. </p1>
+                        <p1>As for 3D printing, I took 3 attempts. The 1st attempt is that the dimensions were all completely wrong as I used dimensions in the wrong areas during modelling. Hence the components are unable to fit inside. </p1>
+                        <p1>The 2nd attempt is that I added too little tolerance of 0.1mm. Most of the components could not fit into the base due to either too tight or unable to fit through. Luckily, this was my test print of infill 5% and the design is parametric. </p1>
+                        <p1>The 3rd and final attempt is to adjust the values in the parameters to the optimal values. The final print took around 3 hours which is may not be ideal for most some cases. Once it was done, the componenets are able to fit into the slots. </p1> 
                     </div>
                 </div>
-                <img src="./images/music-box-images/music-box-done-2.png">
             </div>
             <div class="content" id="content-4">
                 <div class="icon">
@@ -275,16 +309,178 @@
                 </div>
                 <div class="cards">
                     <div class="card">
-                        <img src="./images/music-box-images/music-box-done-1.png">
-                        <p3>Finished Music Box</p3>
+                        <img id="parameter" src="./images/final-project/assembly/assembly.png">
+                        <p3>Assembly Parts</p3>
                     </div>
                 </div>
                 <div class="text">
-                    <p1>Assembly was a piece of cake. </p1>
+                    <p1>Now I will be moving on to the assembly of my Final Project. </p1>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/final-project/assembly/microphone-mount.png">
+                        <p3>Microphone Mount</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/final-project/assembly/nano-mount.png">
+                        <p3>Nano Mount</p3>
+                    </div>
                 </div>
                 <div class="text">
-                    <h2>How to improve</h2>
-                    <p1>What I think can improve is the base design of the audio visualiser. I feel the printing time could be significantly reduced if I can create slots on the sides of the base model to fit laser cut pieces as walls for the audio visualiser. Hence, reducing filament wastage for fail prints. </p1>
+                    <p1>First I mount the microphone and Arduino Nano into their respective mounting slots. </p1>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/final-project/assembly/wires-1.png">
+                        <p3>All Wires Connected to Nano</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/final-project/assembly/microphone-connect.png">
+                        <p3>Connect Wires to Micrphone</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>Next, I carefully connect all the jumper wires to the Arduino Nano, making sure that bend in the right direction. I use duct tape to group the jumper wires together to make easier connections. Once that is done I can directly connected the wires to the microphone. </p1>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/final-project/assembly/matrix-connect.png">
+                        <p3>Connect Wires to Matrix</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/final-project/assembly/matrix-top.png">
+                        <p3>Matrix Mount</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>I connected the LED matrix and mount it onto the slot above the Arduino Nano. </p1>
+                </div>
+
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/final-project/assembly/wires-2.png">
+                        <p3>Wires Underneath the Base</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>All the components from the base is connected will no faults. One final connection left are the 3 mechanical switches. </p1>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/final-project/assembly/mech-switch-mounts.png">
+                        <p3>Mech Switches Mounts</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/final-project/assembly/mech-switch-mounts-bottom.png">
+                        <p3>Mech Switches Angled</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>The mechanical switches nicely fit into the 14mm x 14mm hole. However, they are unable to clip onto the underside of the 3mm plate. Hence, I will need to hotglue them in place. </p1>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/final-project/assembly/mech-switch-soldering-1.png">
+                        <p3>Mech Switches Soldered</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/final-project/assembly/mech-switch-soldering-2.png">
+                        <p3>Pins Soldered</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>I use <mark>Digital Input Pull-Up Resistor</mark> in my program for my mechanical switches. Meaning I will need to solder the 2 pins for each of the mechanical switches to the <mark>GND</mark> and <mark>Digital</mark> pins. </p1>
+                    <p1>To make the wire connections simpler, I use L-header pins as a connector for my jumper wires. The connection pins from top to bottom: <mark>D2</mark>, <mark>GND</mark>, <mark>D3</mark>, <mark>D4</mark>. </p1>
+                </div>
+
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/final-project/assembly/mech-switch-connect.png">
+                        <p3>Connect Wires to Mech Switches</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>I connected the wires for the mechanical switches to the L-header pins. </p1>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/final-project/assembly/screw-cover-1.png">
+                        <p3>Counterbore Screws & Spacers</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/final-project/assembly/screw-cover-2.png">
+                        <p3>Screwing Cover Plate</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>I screwed in M3x35mm counterbore from the bottom of the base through the cover plate and use 10mm spacer to hold the cover plate in place. </p1>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/final-project/assembly/screw-layer-1.png">
+                        <p3>Screwing 1st Layer Plate</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/final-project/assembly/screw-layer-2.png">
+                        <p3>Screwing 2nd Layer Plate</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>I then stacked the layer plates above and use the same spacer to hold them in place. Once all the layers plates are stacked, I use M3x10mm counterbore screws to lock the structure in place. </p1>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/final-project/assembly/acrylic-1.png">
+                        <p3>Slotting Acrylic</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/final-project/assembly/acrylic-2.png">
+                        <p3>Finishing Slotting</p3>
+                    </div>
+                    <div class="card">
+                        <img src="./images/final-project/assembly/Finished-square.png">
+                        <p3>Finished Audio Visualiser</p3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p1>I place all the acrylic sticks into the holes which fits perfectly and firmly into the plates. Once that that is finished, the assembly is completed. </p1>
+                </div>
+
+                <div class="panel">
+                    <div class="body">
+                        <div class="icon">
+                            <ion-icon name="flag"></ion-icon>
+                            <p2>Challenges</p2>
+                        </div>
+                        <div class="text">
+                            <h1>Soldering Mech Switches</h1>
+                            <p1>I find it challenging to solder the mechanical switches because of the uncertainty whether it is a viable method to solder on the 4 L-header pins. I was reluctant to try that at first and initially plan to solder the jumper wires straight away. However, doing so is extremely difficult because the wires are short due to the small area of the base design. </p1> 
+                            <p1>Soldering the the L-header pins was difficult too, but it was the only viable option then. I have to carefully bend and solder the wires from the mechanical switches to the legs of the L-header pins. The difficult part was that the tight space between the legs to solder on the wires properly and I might risk melting the casing of the mechanical switch or the L-header pins. With patience and steady hands, I successfully solder the wires in with no disconnections. </p1>
+                            <p1>Though the L-header pins might have a slight flex when connecting to the jumper wires, it is soldered to 4 other wires where it should be sturdy enough to connect the wires properly in. </p1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text">
+                    <h2>Areas of improvement</h2>
+                    <p1>What I think can improve in terms of the design is the cover plate. Hotgluing components is a mess especially for smaller projects such as this. Hence, 3D print the cover plate to a smaller thickness for the mechanical switches to clip into. </p1>
+                    <p1>Another improvement is to the base design as 3 hours of 3D printing may be too long. What might be worse that the design might fail and have to wait long hours for another print. I can redesign the 3D-printed walls with slots that fit lasercut acrylic as replacement walls. The 3D printed design will definitely be shorter and use less filament. </p1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img id="parameter" src="./images/final-project/assembly/new-walls.png">
+                        <p3>Base Redesign Example - Credits: Lynn's</p3>
+                    </div>
                 </div>
             </div>
         </div>
