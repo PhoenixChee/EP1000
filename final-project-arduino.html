@@ -116,8 +116,8 @@
                     <p1>Adafruit NeoPixel</p1>
                 </a>
                 <a href="#content-4">
-                    <ion-icon name="settings"></ion-icon>
-                    <p1>Troubleshooting</p1>
+                    <ion-icon name="flag"></ion-icon>
+                    <p1>Challenges</p1>
                 </a>
             </div>
         </div>
@@ -161,14 +161,14 @@
                     <img src="./images/final-project/research/fast-fourier-transform.png">
                     <div class="text">
                         <h2>FFTs</h2>
-                        <p2>The Fourier transform deconstructs a time-domain representation of a signal into the frequency domain representation - A signal is sampled over a period of time and divided into its frequency components. These components are single sinusoidal oscillations at distinct frequencies each with their own amplitude and phase. </p2>
+                        <p1>The Fourier transform deconstructs a time-domain representation of a signal into the frequency domain representation - A signal is sampled over a period of time and divided into its frequency components. These components are single sinusoidal oscillations at distinct frequencies each with their own amplitude and phase. </p1>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./images/final-project/research/windowing.png">
                     <div class="text">
                         <h2>Windowing</h2>
-                        <p2>Although performing an FFT on a signal can provide great insight, it is important to know the limitations of the FFT and how to improve the signal clarity using windowing. Spectral leakage is caused by discontinuities in the original, non-integer number of periods in a signal and can be improved using windowing. Windowing reduces the amplitude of the discontinuities at the boundaries of each finite sequence acquired by the digitizer. </p2>
+                        <p1>Although performing an FFT on a signal can provide great insight, it is important to know the limitations of the FFT and how to improve the signal clarity using windowing. Spectral leakage is caused by discontinuities in the original, non-integer number of periods in a signal and can be improved using windowing. Windowing reduces the amplitude of the discontinuities at the boundaries of each finite sequence acquired by the digitizer. </p1>
                     </div>
                 </div>
             </div>
@@ -305,9 +305,9 @@
                         <p2>Calibration - Method 1</p2>
                     </div>
                     <div class="text">
-                        <h2>Auto Max-Min</h2>
-                        <p1>I use two <mark>if-statements</mark> such that if the final magnitude falls above maxMag or below minMag, it updates to maxMag and minMag to its value respectively. </p1>
-                        <p1>However, there were problems using this method. The microphone picks up strange outliers frequencies in each band, causing the updated maxMag and minMag values to have a big difference. The resulting normalized value will be inaccurate, causing LEDs to light up at the wrong positions. </p1>
+                        <h2>Manual Max-Min</h2>
+                        <p1>One way to calibrate is to manually record down the values when the room is silent for minMag values and play a piece of loud music for maxMag values. When there is no sound, the LEDs light up on row 0. </p1>
+                        <p1>However, some normalized magnitude values fluctuate, causing some LEDs to light at different levels. This problem might be from the noise errors received by microphone which I have no control over but it is a good start for calibration. </p1>
                     </div>
                     <a href="#"><p1>Watch Video</p1></a>
                 </div>
@@ -320,9 +320,9 @@
                         <p2>Calibration - Method 2</p2>
                     </div>
                     <div class="text">
-                        <h2>Manual Max-Min</h2>
-                        <p1>A safer way to calibrate the values without noise errors is to manually record down the values when the room is silent for minMag values and play a piece of loud music for maxMag values. When there is no sound, the LEDs light up on row 0. </p1>
-                        <p1>However, some normalized magnitude values fluctuate at low frequencies causing some LEDs to light between rows 0 and 2. This problem might be from the microphone which I have no control over but it is good enough to test the frequencies. </p1>
+                        <h2>Auto Max-Min</h2>
+                        <p1>The 2nd method I use two <mark>if-statements</mark> such that if the final magnitude falls above maxMag or below minMag, it updates to maxMag and minMag to its value respectively. </p1>
+                        <p1>However, there were problems using this method. Louder sounds cause maxMag and minMag to have a large difference. The resulting normalized value will be harder to distinguish, causing LEDs to light up at low levels at normal volume. </p1>
                     </div>
                     <a href="#"><p1>Watch Video</p1></a>
                 </div>
@@ -336,7 +336,7 @@
                     </div>
                     <div class="text">
                         <h2>Average Min</h2>
-                        <p1>This works similar to method 2, I record down the values of at least 100 samples when the room is silent for each band of minMag values. Using excel sheet, I find the average minMag and use that as the threshold. </p1>
+                        <p1>This works similar to method 1, I record down the values of at least 100 samples when the room is silent for each band of minMag values. Using excel sheet, I find the average minMag and use that as the threshold. </p1>
                         <p1>Using this method eliminates noise error and it is more accurate compared to the preuious two methods. </p1>
                     </div>
                     <a href="#"><p1>Watch Video</p1></a>
@@ -459,7 +459,7 @@
                         <p2>Challenges</p2>
                     </div>
                     <div class="text">
-                        <h1>What happened</h1>
+                        <h1>Lack of Online Sources</h1>
                         <p1>Understanding the concept of deconstructing sound signals may be difficult at first. I have to read up a lot of papers to sort of get the idea of FFTs & Windowing. Not only that, the biggest challenge I had was to understand how to use <mark>ArduinoFFT</mark>. </p1>
                         <p1>There were not a lot of helpful sources to guide me to understand the FFT functions in Arduino. The source I reference to make this audio visualisation work is this <a href="https://github.com/kosme/arduinoFFT/blob/master/Examples/FFT_05/FFT_05.ino"><p1>example</p1></a> from GitHub.</p1>
                         <p1>Despite the lack of useful comments in the example, I managed to get an idea how the FFT functions work.</p1>
@@ -474,8 +474,8 @@
                         <p2>Challenges</p2>
                     </div>
                     <div class="text">
-                        <h1>What happened</h1>
-                        <p1>The second challenge was calibrating the magnitude values (method 1 & 2). The values are not very consistent received from microphone, causing the LEDs to flunctuate between columns. Though method 3 has improved accuracy, the slow data processing of the Arduino Nano limits the potential of this microphone. </p1>
+                        <h1>Calibration</h1>
+                        <p1>The second challenge was calibrating the magnitude values (method 1 & 2). The problem lies in the slow data processing of the Arduino Nano limits the potential of this microphone and causing slow response. The values are not very consistent, causing the LEDs to flunctuate at different levels. I had to use method 3 to reduce the inconsistencies of the signals received. </p1>
                     </div>
                 </div>
                 <img src="./images/final-project/arduino/microphone.png">
