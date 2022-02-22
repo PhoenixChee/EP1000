@@ -125,41 +125,6 @@
         max-width: 800px;
     }
 }
-
-
-
-/* Social CSS */
-.socials-container .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.socials-container .social {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin: 40px 0;
-    padding: 0 16px;
-}
-
-.socials-container ion-icon {
-    padding: 10px;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 1);
-    border: solid 2px rgba(255, 255, 255, 1);
-    background-color: rgba(255, 25, 100, 1);
-    border-radius: 100%;
-    transition: all 500ms ease;
-}
-
-.socials-container ion-icon:hover {
-    font-size: 40px;
-    color: rgba(255, 25, 100, 1);
-    border: solid 2px rgba(255, 25, 100, 1);
-    background-color: rgba(255, 255, 255, 1);
-}
-
 @media screen and (max-width: 450px) {
     .contents-container .content, .basics-container p1, .features-container p1 {
         line-height: 1.4;
