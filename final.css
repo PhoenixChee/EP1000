@@ -280,7 +280,13 @@
     width: 100%;
     max-width: 800px;
     border: 2px solid rgba(0, 0, 0, 0.06);
-    border-radius: 20px;
+    border-radius: 30px;
+}
+#custom {
+    width: 100%;
+    max-width: 1100px;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
 }
 
 iframe {

@@ -186,7 +186,7 @@
                     <div class="text">
                         <h2>Arduino FFT</h2>
                         <p1>Fortunately, there is an Arduino Library that helps to do FFT calculations for the signals received. The library I used is called <mark>ArduinoFFT.h</mark>. </p1>
-                        <a href="https://github.com/kosme/arduinoFFT"><p1>Learn More</p1></a>
+                        <a href="https://github.com/kosme/arduinoFFT" target="_blank"><p1>Learn More</p1></a>
                     </div>
                 </div>
                 <img src="./images/final-project/arduino/arduino-library.svg">
@@ -212,7 +212,7 @@
                     </div>
                     <div class="text">
                         <h2>Functions</h2>
-                        <p1>These are the functions I used in my program and I will try my best in-detail to explain. </p1>
+                        <p1>These are the functions I used in my program. There are not a lot of helpful sources out there about using Arduino LED Audio Visualiser and I will try my best to explain in-detail. </p1>
                     </div>
                 </div>
                 <img src="./images/final-project/arduino/loop.svg">
@@ -239,8 +239,8 @@
                     <div class="text">
                         <h2>Sampling at Powers of 2</h2>
                         <p1>First, I sampled 64 signals from the microphone. The samples must be in powers of 2 is because FFT relies on breaking the required calculations into smaller ones that can be done very rapidly. The smallest unit is a 2 point calculation. That is why most FFT implementations require that the number of points being analyzed be equal to a power of 2 (256, 512, 1024, etc.). </p1>
-                        <p1>However, more samples will mean more data to be stored by the Arduino to compute and an Arduino Nano has a dynamic memory of only 2kb. Storing 64 samples has used up to 60% of the memory while using 128 samples will exceed the memory limit, causing the arduino to fail. </p1>
-                        <p1>There are also limitations having lesser samples. The FFT is unable to calculate frequecies higher than 8khz. It is evident in my testing where the microphone could not pick up frequencies below 128hz or above 16khz. Hence in this project, I am using these following 8 bands: 64hz, 128hz, 256hz, 512hz, 1khz, 2khz, 4khz, 8kz. </p1>
+                        <p1>However, more samples will mean more data to be stored by the Arduino to compute and an Arduino Nano has a dynamic memory of only 2kb. Storing 64 samples has used up to 60% of the memory while using 128 samples will exceed and cause the Arduino to fail. </p1>
+                        <p1>There are also limitations having lesser samples. The FFT is unable to calculate frequecies higher than 8khz. It is evident in my testing where the microphone could not pick up frequencies above 16khz. Hence in this project, I am using these following 8 bands: 64hz, 128hz, 256hz, 512hz, 1khz, 2khz, 4khz, 8kz. </p1>
                     </div>
                 </div>
             </div>
@@ -306,10 +306,10 @@
                     </div>
                     <div class="text">
                         <h2>Manual Max-Min</h2>
-                        <p1>One way to calibrate is to manually record down the values when the room is silent for minMag values and play a piece of loud music for maxMag values. When there is no sound, the LEDs light up on row 0. </p1>
-                        <p1>However, some normalized magnitude values fluctuate, causing some LEDs to light at different levels. This problem might be from the noise errors received by microphone which I have no control over but it is a good start for calibration. </p1>
+                        <p1>One way to calibrate is to manually record down the values at zero volume for minMag values and high volume for maxMag values. When there is no sound, the LEDs light up on row 0. </p1>
+                        <p1>However, the normalized magnitude values fluctuate, causing some LEDs to light at different levels. This problem might be from the noise errors received by microphone which I have no control over. Also I did not want to spend time calibrating. </p1>
                     </div>
-                    <a href="#"><p1>Watch Video</p1></a>
+                    <a href="https://youtu.be/zmqbbtnJZMI" target="_blank"><p1>Watch Video</p1></a>
                 </div>
                 <img src="./images/final-project/arduino/calibration-method-1.svg">
             </div>
@@ -321,10 +321,10 @@
                     </div>
                     <div class="text">
                         <h2>Auto Max-Min</h2>
-                        <p1>The 2nd method I use two <mark>if-statements</mark> such that if the final magnitude falls above maxMag or below minMag, it updates to maxMag and minMag to its value respectively. </p1>
-                        <p1>However, there were problems using this method. Louder sounds cause maxMag and minMag to have a large difference. The resulting normalized value will be harder to distinguish, causing LEDs to light up at low levels at normal volume. </p1>
+                        <p1>The 2nd method I use two <mark>if-statements</mark> such that if the finalMag falls above maxMag or below minMag, it updates to maxMag & minMag to its value respectively. </p1>
+                        <p1>However, there were problems using this method. Louder sounds cause maxMag & minsMag to have a large difference. The resulting normalized value will be harder to distinguish at lower volumes. </p1>
                     </div>
-                    <a href="#"><p1>Watch Video</p1></a>
+                    <a href="https://youtu.be/jhvLIT-ocuw" target="_blank"><p1>Watch Video</p1></a>
                 </div>
                 <img src="./images/final-project/arduino/calibration-method-2.svg">
             </div>
@@ -336,10 +336,10 @@
                     </div>
                     <div class="text">
                         <h2>Average Min</h2>
-                        <p1>This works similar to method 1, I record down the values of at least 100 samples when the room is silent for each band of minMag values. Using excel sheet, I find the average minMag and use that as the threshold. </p1>
-                        <p1>Using this method eliminates noise error and it is more accurate compared to the preuious two methods. </p1>
+                        <p1>This works similar to method 1, I record down the values of at least 100 samples at zero volume for each band of minMag values. Using excel sheet, I find the average minMag and use that as a constant. </p1>
+                        <p1>I calculate the difference betweent the finalMag & minMag instead of maxMag & minMag. Using this method is more accurate and eliminates noise error. </p1>
                     </div>
-                    <a href="#"><p1>Watch Video</p1></a>
+                    <a href="https://youtu.be/Dy06du3DS_4" target="_blank"><p1>Watch Video</p1></a>
                 </div>
                 <img src="./images/final-project/arduino/calibration-method-3.svg">
             </div>
@@ -358,7 +358,7 @@
                         <h2>Adafruit NeoPixel</h2>
                         <p1>I use will Method 3 to find the normalised magnitude value find the highest LED per band. </p1>
                         <p1>To light up and individually control the LEDs in the matrix, I use the <mark>Adafruit_NeoPixel.h</mark>. </p1>
-                        <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use"><p1>Learn More</p1></a>
+                        <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use" target="_blank"><p1>Learn More</p1></a>
                     </div>
                 </div>
                 <img src="./images/final-project/arduino/adafruit.png">
@@ -461,7 +461,7 @@
                     <div class="text">
                         <h1>Lack of Online Sources</h1>
                         <p1>Understanding the concept of deconstructing sound signals may be difficult at first. I have to read up a lot of papers to sort of get the idea of FFTs & Windowing. Not only that, the biggest challenge I had was to understand how to use <mark>ArduinoFFT</mark>. </p1>
-                        <p1>There were not a lot of helpful sources to guide me to understand the FFT functions in Arduino. The source I reference to make this audio visualisation work is this <a href="https://github.com/kosme/arduinoFFT/blob/master/Examples/FFT_05/FFT_05.ino"><p1>example</p1></a> from GitHub.</p1>
+                        <p1>There were not a lot of helpful sources to guide me to understand the FFT functions in Arduino. The source I reference to make this audio visualisation work is this <a href="https://github.com/kosme/arduinoFFT/blob/master/Examples/FFT_05/FFT_05.ino" target="_blank"><p1>example</p1></a> from GitHub.</p1>
                         <p1>Despite the lack of useful comments in the example, I managed to get an idea how the FFT functions work.</p1>
                     </div>
                 </div>
@@ -474,8 +474,8 @@
                         <p2>Challenges</p2>
                     </div>
                     <div class="text">
-                        <h1>Calibration</h1>
-                        <p1>The second challenge was calibrating the magnitude values (method 1 & 2). The problem lies in the slow data processing of the Arduino Nano limits the potential of this microphone and causing slow response. The values are not very consistent, causing the LEDs to flunctuate at different levels. I had to use method 3 to reduce the inconsistencies of the signals received. </p1>
+                        <h1>Inconsistent Values</h1>
+                        <p1>The second challenge was calibrating the magnitude values (method 1 & 2). The problem lies in the slow data processing of the Arduino Nano limits the potential of this microphone and causing slow response. The values are not very consistent, causing the some LEDs to flunctuate at different levels. I had to use method 3 to reduce the inconsistencies of the signals received. </p1>
                     </div>
                 </div>
                 <img src="./images/final-project/arduino/microphone.png">
